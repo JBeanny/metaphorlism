@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaldi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --colorPri: #7743DB;
+  --background: #EEEEEE;
+  --subColor: #383838a1;
+  --subColorDark: #383838cd;
+  --colorWhite: #FFFFFF;
+  font-family: "Jaldi", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+.container .heroSection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3em;
+}
+.container .heroSection .heroContent {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .heroSection .heroContent .welcome {
+  width: 100%;
+  color: var(--colorPri);
+  font-size: 3em;
+  line-height: 1.5em;
+  display: flex;
+}
+.container .heroSection .heroContent .quote {
+  width: 100%;
+  margin-top: 1em;
+  color: var(--subColor);
+  font-size: 2em;
+}
+.container .heroSection .heroContent .talkBtnContainer {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+.container .heroSection .heroContent .talkBtnContainer .talkBtn {
+  width: 10em;
+  padding: 0.8em;
+  background-color: var(--colorPri);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--colorWhite);
+  font-size: 1.5em;
+  border-radius: 0.5em;
+  margin-top: 1em;
+}
+.container .heroSection .heroContent .inspiration {
+  width: 100%;
+  color: var(--subColorDark);
+  font-size: 3em;
+  line-height: 1.5em;
+}
+.container .heroSection .heroImage {
+  width: 40%;
+  height: 100%;
+}
+.container .heroSection .heroImage .img {
+  width: 90%;
+  border-radius: 1em;
+}
+.container .heroSection::after {
+  content: "";
+  width: 0;
+  height: 5vh;
+  rotate: -5deg;
+  background-color: var(--colorPri);
+  position: absolute;
+  bottom: 10em;
+  display: flex;
+  align-items: center;
+  margin-top: 5em;
+  padding-left: 10em;
+  -webkit-animation: banner 3s linear forwards;
+          animation: banner 3s linear forwards;
+}
+@-webkit-keyframes banner {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    content: "Metaphorlism will make your metaphors into reality !!!";
+    width: 101vw;
+  }
+}
+@keyframes banner {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    content: "Metaphorlism will make your metaphors into reality !!!";
+    width: 101vw;
+  }
+}
+.container .teamSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .teamTitle {
+  width: 100%;
+  height: 10vh;
+  color: var(--colorPri);
+  font-size: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1em;
+}
+.container .teamSection .teamTitle div {
+  padding-left: 0.1em;
+}
+.container .teamSection .teamTitle .titleStyle {
+  width: 25%;
+  background-color: var(--colorWhite);
+  padding: 0.1em;
+  border: 2px solid var(--colorPri);
+  border-radius: 1em;
+}
+.container .teamSection .team {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .team .memberPriCol {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--colorPri);
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+.container .teamSection .team .memberPriCol .profile {
+  width: 50%;
+  height: 20%;
+  display: flex;
+}
+.container .teamSection .team .memberPriCol .profile .profileImg {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .teamSection .team .memberPriCol .profile .profileImg .img {
+  height: 100%;
+  border-radius: 50%;
+}
+.container .teamSection .team .memberPriCol .profile .profileText {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3em;
+}
+.container .teamSection .team .memberPriCol .profile .profileText .name {
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+}
+.container .teamSection .team .memberPriCol .profile .profileText .age {
+  width: 100%;
+  font-size: 2em;
+}
+.container .teamSection .team .memberPriCol .memberContent {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  margin-top: 5em;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .education {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .education .educationTitle {
+  width: 20%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .education .educationTitle svg {
+  fill: var(--colorWhite);
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .education .educationContent {
+  width: 80%;
+  height: 80%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .education .educationContent li {
+  height: 5vh;
+  line-height: 2em;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .experience {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .experience .experienceTitle {
+  width: 20%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .experience .experienceTitle svg {
+  fill: var(--colorWhite);
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .experience .experienceContent {
+  width: 80%;
+  height: 80%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .experience .experienceContent li {
+  height: 5vh;
+  line-height: 2em;
+}
+.container .teamSection .team .memberPriCol .memberContent .col2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  margin-top: 5em;
+}
+.container .teamSection .team .memberPriCol .memberContent .col2 .capability {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .team .memberPriCol .memberContent .col2 .capability .capabilityTitle {
+  width: 40%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+}
+.container .teamSection .team .memberPriCol .memberContent .col2 .capability .capabilityTitle svg {
+  margin-right: 1em;
+  stroke: var(--colorWhite);
+}
+.container .teamSection .team .memberPriCol .memberContent .col2 .capability .capabilityContent {
+  width: 90%;
+  height: 70%;
+  font-size: 1.5em;
+  background-color: var(--colorWhite);
+  border-radius: 1em;
+  margin-top: 1em;
+  color: var(--colorPri);
+  padding: 2em;
+  line-height: 2em;
+}
+.container .teamSection .team .memberWhiCol {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+.container .teamSection .team .memberWhiCol .profile {
+  width: 50%;
+  height: 20%;
+  display: flex;
+}
+.container .teamSection .team .memberWhiCol .profile .profileImg {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .teamSection .team .memberWhiCol .profile .profileImg .img {
+  height: 100%;
+  border-radius: 50%;
+}
+.container .teamSection .team .memberWhiCol .profile .profileText {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3em;
+  color: var(--subColorDark);
+}
+.container .teamSection .team .memberWhiCol .profile .profileText .name {
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+}
+.container .teamSection .team .memberWhiCol .profile .profileText .age {
+  width: 100%;
+  font-size: 2em;
+}
+.container .teamSection .team .memberWhiCol .memberContent {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  margin-top: 5em;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .education {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .education .educationTitle {
+  width: 20%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--colorPri);
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .education .educationTitle svg {
+  fill: var(--colorPri);
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .education .educationContent {
+  width: 80%;
+  height: 80%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--subColorDark);
+  margin: 0 auto;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .education .educationContent li {
+  height: 5vh;
+  line-height: 2em;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .experience {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .experience .experienceTitle {
+  width: 20%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--colorPri);
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .experience .experienceTitle svg {
+  fill: var(--colorPri);
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .experience .experienceContent {
+  width: 80%;
+  height: 80%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--subColorDark);
+  margin: 0 auto;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col1 .experience .experienceContent li {
+  height: 5vh;
+  line-height: 2em;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  margin-top: 5em;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col2 .capability {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .teamSection .team .memberWhiCol .memberContent .col2 .capability .capabilityTitle {
+  width: 40%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  color: var(--colorPri);
+}
+.container .teamSection .team .memberWhiCol .memberContent .col2 .capability .capabilityTitle svg {
+  margin-right: 1em;
+  stroke: var(--colorPri);
+}
+.container .teamSection .team .memberWhiCol .memberContent .col2 .capability .capabilityContent {
+  width: 90%;
+  height: 70%;
+  font-size: 1.5em;
+  background-color: var(--colorPri);
+  border-radius: 1em;
+  margin-top: 1em;
+  color: var(--colorWhite);
+  padding: 2em;
+  line-height: 2em;
+}
+.container .serviceSection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5em;
+}
+.container .serviceSection .serviceTitle {
+  width: 100%;
+  height: 10vh;
+  color: var(--colorPri);
+  font-size: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.container .serviceSection .serviceTitle div {
+  padding-left: 0.1em;
+}
+.container .serviceSection .serviceTitle .titleStyle {
+  width: 25%;
+  background-color: var(--colorWhite);
+  padding: 0.1em;
+  border: 2px solid var(--colorPri);
+  border-radius: 1em;
+}
+.container .serviceSection .serviceContent {
+  width: 95%;
+  height: 90vh;
+  margin: 0 auto;
+  background-color: var(--colorPri);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.container .serviceSection .serviceContent .row1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  padding: 3em;
+}
+.container .serviceSection .serviceContent .row1 .serviceProvide {
+  width: 70%;
+  height: 100%;
+  font-size: 2em;
+  color: var(--colorWhite);
+}
+.container .serviceSection .serviceContent .row1 .serviceProvide ol {
+  padding: 1em;
+}
+.container .serviceSection .serviceContent .row1 .serviceProvide ol li {
+  line-height: 1.5em;
+  opacity: 0.8;
+}
+.container .serviceSection .serviceContent .row1 .btnContainer {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+}
+.container .serviceSection .serviceContent .row1 .btnContainer .btn {
+  width: 50%;
+  height: 20%;
+  background-color: var(--colorWhite);
+  cursor: pointer;
+  color: var(--colorPri);
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1em;
+  margin-top: 1em;
+}
+.container .serviceSection .serviceContent .row2 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .serviceSection .serviceContent .row2 .box {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.container .serviceSection .serviceContent .row2 .box .boxImage {
+  width: 50%;
+  height: 30%;
+  margin-bottom: 3em;
+}
+.container .serviceSection .serviceContent .row2 .box .boxImage img {
+  height: 100%;
+}
+.container .serviceSection .serviceContent .row2 .box .boxName {
+  height: 15%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.container .serviceSection .serviceContent .row2 .box .boxContent {
+  height: 30%;
+  font-size: 1.5em;
+}/*# sourceMappingURL=index.module.css.map */

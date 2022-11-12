@@ -1,0 +1,12 @@
+import React from 'react'
+
+const ExperienceIcon = () => {
+  return (
+    <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M47.5351 46.9106H35.0351V6.28564H47.5351V46.9106ZM38.1601 43.7856H44.4101V9.41064H38.1601V43.7856ZM31.9101 46.9106H19.4101V18.7856H31.9101V46.9106ZM22.5351 43.7856H28.7851V21.9106H22.5351V43.7856ZM16.2851 46.9106H3.7851V28.1606H16.2851V46.9106ZM6.9101 43.7856H13.1601V31.2856H6.9101V43.7856Z"/>
+    </svg>
+
+  )
+}
+
+export default ExperienceIcon
