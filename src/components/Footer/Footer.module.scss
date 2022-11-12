@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  font-size: 1.1em;
+  display: flex;
+  padding: 1.5em 2em;
+  background: var(--clr-background);
+  align-items: center;
+  border-top: 3px solid var(--clr-purple);
+  font-family: "Jaldi", sans-serif;
+  gap: 1.5em;
+
+  img {
+    width: 4em;
+    height: 4em;
+    background: black;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-size: 1.7em;
+  }
+
+  .copyright {
+    margin-left: auto;
+  }
+}
