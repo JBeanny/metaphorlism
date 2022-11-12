@@ -1,0 +1,44 @@
+.container {
+  background-color: #fff;
+  width: 40ch;
+  height: 25em;
+  position: relative;
+  padding-top: 3em;
+  border-radius: 10px;
+
+  a {
+    position: absolute;
+    color: #fff;
+    background-color: var(--clr-purple);
+    text-decoration: none;
+    padding: 0.1em 0.8em;
+    border-radius: 10px;
+    bottom: 0.5em;
+    right: 0.5em;
+
+    &:visited,
+    &:active {
+      color: #fff;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 8em;
+    height: 8em;
+    top: -5em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-weight: 400;
+    color: var(--clr-purple);
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+}

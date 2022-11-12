@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Outlet } from "react-router-dom";
 import { Footer, Navigation } from "./components";
+import { Service } from "./pages";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         element={
           <>
             <Navigation />
-            <div style={{ paddingTop: "5em" }}>
+            <div style={{ paddingTop: "5.5em" }}>
               <Outlet />
             </div>
             <Footer />
@@ -19,6 +20,7 @@ function App() {
         }
       >
         <Route path="/" element={<></>} />
+        <Route path="/service" element={<Service />} />
       </Route>
     </Routes>
   );
