@@ -1,0 +1,149 @@
+.container {
+  background-color: #eeeeee;
+  display: flex;
+  font-family: "Jaldi", sans-serif;
+  font-size: 1.1em;
+  align-items: center;
+  padding: 1em 1.5em;
+  gap: 1em;
+  position: fixed;
+  width: 100%;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    img {
+      width: 3em;
+      height: 3em;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 1.2em;
+      font-weight: 400;
+      color: var(--clr-purple);
+    }
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    color: var(--clr-purple);
+    gap: 0.3em;
+    cursor: pointer;
+    padding: 0.3em 1.2em;
+    border-radius: 10px;
+    position: relative;
+
+    svg {
+      fill: var(--clr-purple);
+    }
+
+    &.home {
+      margin-left: auto;
+
+      svg {
+        stroke: var(--clr-purple);
+        fill: none;
+      }
+    }
+
+    &:hover:not(.active) {
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 10px;
+      }
+
+      &::before {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        background-color: var(--clr-background);
+        bottom: 0.3em;
+        z-index: -1;
+      }
+
+      &::after {
+        left: 50%;
+        right: 50%;
+        background: var(--clr-purple);
+        z-index: -2;
+
+        animation: HoverLink 0.3s ease forwards;
+      }
+    }
+  }
+}
+
+div.link.active {
+  color: #fff;
+
+  svg {
+    fill: #fff;
+  }
+
+  &.home svg {
+    stroke: #fff;
+  }
+
+  background-color: var(--clr-purple);
+}
+
+div.link.clickAnimation {
+  color: #fff;
+
+  svg {
+    fill: #fff;
+  }
+
+  &.home svg {
+    stroke: #fff;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+  }
+
+  &::before {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background-color: var(--clr-background);
+    bottom: 0.3em;
+    z-index: -1;
+
+    animation: ClickLink .1s ease forwards;
+  }
+
+  &::after {
+    background: var(--clr-purple);
+    z-index: -2;
+  }
+}
+
+@keyframes HoverLink {
+  to {
+    left: 0;
+    right: 0;
+  }
+}
+
+@keyframes ClickLink {
+  to {
+    bottom: 100%;
+  }
+}
