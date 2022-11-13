@@ -12,7 +12,7 @@ function App() {
         element={
           <>
             <Navigation />
-            <div style={{ paddingTop: "5.5em" }}>
+            <div style={{ marginTop: "5.5em" }}>
               <Outlet />
             </div>
             <Footer />

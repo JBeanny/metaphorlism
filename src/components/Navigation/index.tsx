@@ -57,7 +57,7 @@ function Navigation() {
   };
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id="navigation-bar">
       <div className={classes.logo}>
         <img src={Logo} alt="Metaphorlism's Logo" />
         <h1 className={classes.name}>Metaphorlism</h1>

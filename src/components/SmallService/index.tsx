@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./index.module.css";
 
 type SmallServiceProps = {
@@ -13,10 +12,21 @@ function SmallService(props: SmallServiceProps) {
 
   return (
     <div className={`${classes.container}`}>
-      <img src={image} alt="#" />
+      <img src={image} alt={id} />
       <h2>{title}</h2>
       <p>{description}</p>
-      <a href={`#${id}`}>View more</a>
+      <a
+        onClick={() => {
+          window.scrollTo({
+            top:
+              (document.getElementById(id)?.offsetTop || 0) -
+              (document.getElementById("navigation-bar")?.offsetHeight || 0),
+            behavior: "smooth",
+          });
+        }}
+      >
+        View more
+      </a>
     </div>
   );
 }

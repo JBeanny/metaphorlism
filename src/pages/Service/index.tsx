@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Dev, Lecture, OptionIcon, UI } from "../../assets";
+import { Dev, Lecture, UI, UIPicture } from "../../assets";
 import { SmallService, DetailService } from "../../components";
 import classes from "./index.module.css";
 
@@ -13,6 +12,7 @@ function Service() {
       package: [
         {
           name: "Basic",
+          image: UIPicture,
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, veritatis.",
           serviceList: ["Example1", "Example2", "Example3", "Example4"],
@@ -21,6 +21,7 @@ function Service() {
         },
         {
           name: "Advance",
+          image: "",
           description:
             "Lorem consectetur adipisicing elit. Officia, veritatis.",
           serviceList: ["Example5", "Example2", "Example3", "Example4"],
@@ -37,6 +38,7 @@ function Service() {
       package: [
         {
           name: "Basic",
+          image: "",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, veritatis.",
           serviceList: ["Example1", "Example2", "Example3", "Example4"],
@@ -53,6 +55,7 @@ function Service() {
       package: [
         {
           name: "Basic",
+          image: "",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, veritatis.",
           serviceList: ["Example1", "Example2", "Example3", "Example4"],
@@ -67,7 +70,7 @@ function Service() {
     <>
       <h1 className={classes.title}>Our Services</h1>
       <div className={classes.serviceContainer}>
-        {SERVICE.map((service) => {
+        {SERVICE.map((service, i) => {
           return (
             <SmallService
               key={service.id}
@@ -79,7 +82,7 @@ function Service() {
           );
         })}
       </div>
-      {SERVICE.map((service) => {
+      {SERVICE.map((service, i) => {
         return (
           <DetailService
             key={service.id}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 import classes from "./index.module.css";
 import { OptionIcon } from "../../assets";
 
@@ -7,6 +7,7 @@ type DetailServiceProps = {
   title: string;
   servicePackage: Array<{
     name: string;
+    image: string;
     description: string;
     serviceList: Array<string>;
     duration: number;
@@ -37,7 +38,7 @@ function DetailService(props: DetailServiceProps) {
       </h1>
       <div className={classes.container}>
         <div className={classes.imageSection}>
-          <img src="#" alt="#" />
+          <img src={bundle.image} alt={bundle.name} />
           <div className={classes.action}>
             <div className={classes.optionSelector}>
               {bundle.name}

@@ -7,6 +7,7 @@ import Logo from "./Logo.png";
 import Dev from "./Dev.png";
 import Lecture from "./Lecture.png";
 import UI from "./UI.png";
+import UIPicture from "./UIPicture.png";
 
 export {
   HomeIcon,
@@ -18,4 +19,5 @@ export {
   Dev,
   Lecture,
   UI,
+  UIPicture,
 };
