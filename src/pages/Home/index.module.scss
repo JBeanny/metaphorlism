@@ -596,9 +596,14 @@
             border-radius: 0.3em;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             font-size: 1em;
             margin-top: 1em;
+            transition: .3s all ease;
+
+            &:hover{
+              width: 100%;
+            }
           }
         }
       }
@@ -610,57 +615,37 @@
         justify-content: space-evenly;
         align-items: center;
 
-        .btnContainer {
+        .box{
           width: 30%;
-          height: 100%;
+          height: 80%;
           display: flex;
           flex-direction: column;
-          font-size: 2em;
-          color: var(--clr-white);
 
-          .btn {
+          .boxImage {
             width: 50%;
-            height: 20%;
-            background-color: var(--clr-white);
-            cursor: pointer;
-            color: var(--clr-purple);
-            border-radius: 0.3em;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            font-size: 1em;
-            margin-top: 1em;
-            border: 2px solid var(--clr-white);
-            transition: 0.3s all ease;
-
-            &:hover {
-              width: 100%;
-              font-weight: bold;
+            height: 30%;
+            margin-bottom: 3em;
+    
+            img {
+              height: 100%;
             }
+          }
+    
+          .boxName {
+            height: 15%;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--clr-white);
+          }
+    
+          .boxContent {
+            height: 30%;
+            font-size: 1.5em;
+            color: var(--clr-white);
           }
         }
       }
-
-      .boxImage {
-        width: 50%;
-        height: 30%;
-        margin-bottom: 3em;
-
-        img {
-          height: 100%;
-        }
-      }
-
-      .boxName {
-        height: 15%;
-        font-size: 1.5em;
-        font-weight: bold;
-      }
-
-      .boxContent {
-        height: 30%;
-        font-size: 1.5em;
-      }
+      
     }
   }
 }

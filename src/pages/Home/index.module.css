@@ -532,9 +532,13 @@
   border-radius: 0.3em;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   font-size: 1em;
   margin-top: 1em;
+  transition: 0.3s all ease;
+}
+.container .serviceSection .serviceContent .row1 .btnContainer .btn:hover {
+  width: 100%;
 }
 .container .serviceSection .serviceContent .row2 {
   width: 100%;
@@ -543,47 +547,28 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.container .serviceSection .serviceContent .row2 .btnContainer {
+.container .serviceSection .serviceContent .row2 .box {
   width: 30%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
-  font-size: 2em;
-  color: var(--clr-white);
 }
-.container .serviceSection .serviceContent .row2 .btnContainer .btn {
-  width: 50%;
-  height: 20%;
-  background-color: var(--clr-white);
-  cursor: pointer;
-  color: var(--clr-purple);
-  border-radius: 0.3em;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 1em;
-  margin-top: 1em;
-  border: 2px solid var(--clr-white);
-  transition: 0.3s all ease;
-}
-.container .serviceSection .serviceContent .row2 .btnContainer .btn:hover {
-  width: 100%;
-  font-weight: bold;
-}
-.container .serviceSection .serviceContent .boxImage {
+.container .serviceSection .serviceContent .row2 .box .boxImage {
   width: 50%;
   height: 30%;
   margin-bottom: 3em;
 }
-.container .serviceSection .serviceContent .boxImage img {
+.container .serviceSection .serviceContent .row2 .box .boxImage img {
   height: 100%;
 }
-.container .serviceSection .serviceContent .boxName {
+.container .serviceSection .serviceContent .row2 .box .boxName {
   height: 15%;
   font-size: 1.5em;
   font-weight: bold;
+  color: var(--clr-white);
 }
-.container .serviceSection .serviceContent .boxContent {
+.container .serviceSection .serviceContent .row2 .box .boxContent {
   height: 30%;
   font-size: 1.5em;
+  color: var(--clr-white);
 }/*# sourceMappingURL=index.module.css.map */
