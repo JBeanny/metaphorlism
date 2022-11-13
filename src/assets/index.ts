@@ -14,6 +14,7 @@ import Dev from "./images/Dev.png";
 import Lecture from "./images/Lecture.png";
 import UI from "./images/UI.png";
 import UIPicture from "./images/UIPicture.png";
+import ExternalIcon from "./svg/ExternalIcon";
 
 export {
   HomeIcon,
@@ -32,4 +33,5 @@ export {
   EducationIcon,
   ExperienceIcon,
   CapabilityIcon,
+  ExternalIcon,
 };

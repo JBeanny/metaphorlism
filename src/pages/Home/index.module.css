@@ -217,9 +217,25 @@
   color: var(--clr-white);
   margin: 0 auto;
 }
-.container .teamSection .team .memberPriCol .memberContent .col1 .education .educationContent li {
-  height: 5vh;
-  line-height: 2em;
+.container .teamSection .team .memberPriCol .memberContent .col1 .education .educationContent .talkBtn {
+  width: 10em;
+  padding: 0.8em;
+  background-color: var(--clr-purple);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--clr-white);
+  font-size: 1.5em;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  cursor: pointer;
+  border: 2px solid var(--clr-purple);
+  transition: 0.3s all ease;
+}
+.container .teamSection .team .memberPriCol .memberContent .col1 .education .educationContent .talkBtn:hover {
+  background-color: transparent;
+  border: 2px solid #383838;
+  color: #383838;
 }
 .container .teamSection .team .memberPriCol .memberContent .col1 .experience {
   width: 100%;
@@ -527,27 +543,47 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.container .serviceSection .serviceContent .row2 .box {
+.container .serviceSection .serviceContent .row2 .btnContainer {
   width: 30%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  font-size: 2em;
   color: var(--clr-white);
 }
-.container .serviceSection .serviceContent .row2 .box .boxImage {
+.container .serviceSection .serviceContent .row2 .btnContainer .btn {
+  width: 50%;
+  height: 20%;
+  background-color: var(--clr-white);
+  cursor: pointer;
+  color: var(--clr-purple);
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1em;
+  margin-top: 1em;
+  border: 2px solid var(--clr-white);
+  transition: 0.3s all ease;
+}
+.container .serviceSection .serviceContent .row2 .btnContainer .btn:hover {
+  width: 100%;
+  font-weight: bold;
+}
+.container .serviceSection .serviceContent .boxImage {
   width: 50%;
   height: 30%;
   margin-bottom: 3em;
 }
-.container .serviceSection .serviceContent .row2 .box .boxImage img {
+.container .serviceSection .serviceContent .boxImage img {
   height: 100%;
 }
-.container .serviceSection .serviceContent .row2 .box .boxName {
+.container .serviceSection .serviceContent .boxName {
   height: 15%;
   font-size: 1.5em;
   font-weight: bold;
 }
-.container .serviceSection .serviceContent .row2 .box .boxContent {
+.container .serviceSection .serviceContent .boxContent {
   height: 30%;
   font-size: 1.5em;
 }/*# sourceMappingURL=index.module.css.map */
