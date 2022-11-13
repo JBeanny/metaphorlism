@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Outlet } from "react-router-dom";
 import { Footer, Navigation } from "./components";
-import { Home, Service, Project, Contact } from "./pages";
+import { Home, Service, Project, Contact , Detail} from "./pages";
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/detail" element={<Detail />} />
       </Route>
     </Routes>
   );

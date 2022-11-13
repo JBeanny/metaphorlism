@@ -3,9 +3,15 @@ import classes from "./index.module.css";
 import project from "../../data/project";
 import { ExternalIcon } from "../../assets";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const index = () => {
   const projects = project;
+  const navigate = useNavigate();
+
+  const detailClick = (project: object) => {
+    navigate("/detail",{state:{project: project}});
+  }
 
   const ProjectContent = ({ projectType }: { projectType: string }) => {
     const projectWithType = projects.filter((val) => val.type === projectType);
@@ -34,8 +40,8 @@ const index = () => {
                     </div>
                   </div>
 
-                  <div className={classes.externalBtn}>
-                    <ExternalIcon />
+                  <div className={classes.externalBtn} onClick={() => detailClick(project)}>
+                    <ExternalIcon/>
                   </div>
                 </div>
               </div>
