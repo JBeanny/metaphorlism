@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation , useNavigate} from "react-router-dom";
 import {
   ContactIcon,
   HomeIcon,
@@ -16,12 +16,15 @@ function Navigation() {
   const [active, setActive] = useState("home");
   const [transition, setTransition] = useState("");
 
+  const navigate = useNavigate();
+
   const handleLink = (name: string) => {
     switch (name) {
       case "home":
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          navigate("/");
         }, TIMEOUT);
         setTransition(name);
         break;
@@ -29,6 +32,7 @@ function Navigation() {
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          navigate("/service");
         }, TIMEOUT);
         setTransition(name);
         break;
@@ -36,6 +40,7 @@ function Navigation() {
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          navigate("/project");
         }, TIMEOUT);
         setTransition(name);
         break;
@@ -43,6 +48,7 @@ function Navigation() {
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          navigate("/contact");
         }, TIMEOUT);
         setTransition(name);
         break;

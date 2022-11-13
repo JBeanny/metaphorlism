@@ -1,4 +1,4 @@
-import {Home} from './pages';
+import {Home,Project} from './pages';
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Outlet } from "react-router-dom";
@@ -20,6 +20,7 @@ function App() {
         }
       >
         <Route path="/" element={<Home></Home>} />
+        <Route path="/project" element={<Project></Project>} />
       </Route>
     </Routes>
   );

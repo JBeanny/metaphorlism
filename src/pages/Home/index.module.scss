@@ -68,6 +68,15 @@
                     font-size: 1.5em;
                     border-radius: .5em;
                     margin-top: 1em;
+                    cursor: pointer;
+                    border: 2px solid var(--colorPri);
+                    transition: .3s all ease;
+
+                    &:hover{
+                        background-color: transparent;
+                        border: 2px solid #383838;
+                        color: #383838;
+                    }
                 }
             }
 
@@ -591,6 +600,7 @@
                     flex-direction: column;
                     font-size: 2em;
                     color: var(--colorWhite);
+                    
 
                     .btn{
                         width: 50%;
@@ -604,6 +614,13 @@
                         justify-content: space-evenly;
                         font-size: 1em;
                         margin-top: 1em;
+                        border: 2px solid var(--colorWhite);
+                        transition: .3s all ease;
+
+                        &:hover{
+                            width: 100%;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
