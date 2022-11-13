@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   ContactIcon,
   HomeIcon,
@@ -12,8 +12,9 @@ import classes from "./index.module.css";
 const TIMEOUT = 100;
 
 function Navigation() {
+  const nav = useNavigate();
   const { pathname } = useLocation();
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState(pathname.split("/")[1] || "home");
   const [transition, setTransition] = useState("");
 
   const handleLink = (name: string) => {
@@ -22,6 +23,7 @@ function Navigation() {
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          nav(`/`);
         }, TIMEOUT);
         setTransition(name);
         break;
@@ -29,6 +31,7 @@ function Navigation() {
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          nav(`/${name}`);
         }, TIMEOUT);
         setTransition(name);
         break;
@@ -36,6 +39,7 @@ function Navigation() {
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          nav(`/${name}`);
         }, TIMEOUT);
         setTransition(name);
         break;
@@ -43,6 +47,7 @@ function Navigation() {
         setTimeout(() => {
           setTransition("");
           setActive(name);
+          nav(`/${name}`);
         }, TIMEOUT);
         setTransition(name);
         break;
@@ -52,7 +57,7 @@ function Navigation() {
   };
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id="navigation-bar">
       <div className={classes.logo}>
         <img src={Logo} alt="Metaphorlism's Logo" />
         <h1 className={classes.name}>Metaphorlism</h1>

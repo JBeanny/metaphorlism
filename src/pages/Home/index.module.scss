@@ -1,649 +1,627 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    --colorPri: #7743DB;
-    --background: #EEEEEE;
-    --subColor: #383838a1;
-    --subColorDark: #383838cd;
-    --colorWhite: #FFFFFF;
-    font-family: 'Jaldi', sans-serif;
-}
+.container {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--clr-background);
+  display: flex;
+  flex-direction: column;
 
+  .heroSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3em;
 
-.container{
-    width: 100vw;
+    .heroContent {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .welcome {
+        width: 100%;
+        color: var(--clr-purple);
+        font-size: 3em;
+        line-height: 1.5em;
+        display: flex;
+      }
+
+      .quote {
+        width: 100%;
+        margin-top: 1em;
+        color: var(--clr-sub);
+        font-size: 2em;
+      }
+
+      .talkBtnContainer {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1em;
+
+        .talkBtn {
+          width: 10em;
+          padding: 0.8em;
+          background-color: var(--clr-purple);
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          color: var(--clr-white);
+          font-size: 1.5em;
+          border-radius: 0.5em;
+          margin-top: 1em;
+        }
+      }
+
+      .inspiration {
+        width: 100%;
+        color: var(--clr-subDark);
+        font-size: 3em;
+        line-height: 1.5em;
+      }
+    }
+
+    .heroImage {
+      width: 40%;
+      height: 100%;
+
+      .img {
+        width: 85%;
+        border-radius: 1em;
+      }
+    }
+  }
+
+  .heroSection::after {
+    content: "";
+    width: 0;
+    height: 5vh;
+    rotate: -5deg;
+    background-color: var(--clr-purple);
+    position: absolute;
+    bottom: 10em;
+    display: flex;
+    align-items: center;
+    margin-top: 5em;
+    padding-left: 10em;
+    color: var(--clr-white);
+    animation: banner 3s linear forwards;
+  }
+
+  @keyframes banner {
+    0% {
+      width: 0vw;
+    }
+    100% {
+      content: "Metaphorlism will make your metaphors into reality !!!";
+      width: 101vw;
+    }
+  }
+
+  .teamSection {
+    width: 100%;
     height: 100%;
-    background-color: var(--background);
     display: flex;
     flex-direction: column;
-    
-    .heroSection{
+
+    .teamTitle {
+      width: 100%;
+      height: 10vh;
+      color: var(--clr-purple);
+      font-size: 3em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-left: 1em;
+      margin-bottom: 1em;
+
+      div {
+        padding-left: 0.1em;
+      }
+
+      .titleStyle {
+        width: 25%;
+        background-color: var(--clr-white);
+        padding: 0.1em;
+        border: 2px solid var(--clr-purple);
+        border-radius: 1em;
+      }
+    }
+
+    .team {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+
+      .memberPriCol {
         width: 100%;
         height: 100vh;
+        background-color: var(--clr-purple);
+        margin-top: 1em;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        padding-top: 2em;
+
+        .profile {
+          width: 50%;
+          height: 20%;
+          display: flex;
+
+          .profileImg {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .img {
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+
+          .profileText {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 3em;
+            color: var(--clr-white);
+
+            .name {
+              width: 100%;
+              font-size: 2em;
+              font-weight: bold;
+            }
+
+            .age {
+              width: 100%;
+              font-size: 2em;
+            }
+          }
+        }
+
+        .memberContent {
+          width: 100%;
+          height: 80%;
+          display: flex;
+
+          .col1 {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2em;
+            margin-top: 5em;
+
+            .education {
+              width: 100%;
+              height: 40%;
+              display: flex;
+              flex-direction: column;
+
+              .educationTitle {
+                width: 20%;
+                font-size: 1.5em;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                color: var(--clr-white);
+
+                svg {
+                  fill: var(--clr-white);
+                }
+              }
+
+              .educationContent {
+                width: 80%;
+                height: 80%;
+                font-size: 1.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                color: var(--clr-white);
+
+                margin: 0 auto;
+
+                li {
+                  height: 5vh;
+                  line-height: 2em;
+                }
+              }
+            }
+
+            .experience {
+              width: 100%;
+              height: 40%;
+              display: flex;
+              flex-direction: column;
+
+              .experienceTitle {
+                width: 20%;
+                font-size: 1.5em;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                color: var(--clr-white);
+
+                svg {
+                  fill: var(--clr-white);
+                }
+              }
+
+              .experienceContent {
+                width: 80%;
+                height: 80%;
+                font-size: 1.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                color: var(--clr-white);
+
+                margin: 0 auto;
+
+                li {
+                  height: 5vh;
+                  line-height: 2em;
+                }
+              }
+            }
+          }
+
+          .col2 {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2em;
+            margin-top: 5em;
+
+            .capability {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+
+              .capabilityTitle {
+                width: 40%;
+                font-size: 1.5em;
+                display: flex;
+                align-items: center;
+                color: var(--clr-white);
+
+                svg {
+                  margin-right: 1em;
+                  stroke: var(--clr-white);
+                }
+              }
+
+              .capabilityContent {
+                width: 90%;
+                height: 70%;
+                font-size: 1.5em;
+                background-color: var(--clr-white);
+                border-radius: 1em;
+                margin-top: 1em;
+                color: var(--clr-purple);
+                padding: 2em;
+                line-height: 2em;
+              }
+            }
+          }
+        }
+      }
+
+      .memberWhiCol {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--clr-background);
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2em;
+
+        .profile {
+          width: 50%;
+          height: 20%;
+          display: flex;
+
+          .profileImg {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .img {
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+
+          .profileText {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 3em;
+            color: var(--clr-subDark);
+
+            .name {
+              width: 100%;
+              font-size: 2em;
+              font-weight: bold;
+            }
+
+            .age {
+              width: 100%;
+              font-size: 2em;
+            }
+          }
+        }
+
+        .memberContent {
+          width: 100%;
+          height: 80%;
+          display: flex;
+
+          .col1 {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2em;
+            margin-top: 5em;
+
+            .education {
+              width: 100%;
+              height: 40%;
+              display: flex;
+              flex-direction: column;
+
+              .educationTitle {
+                width: 20%;
+                font-size: 1.5em;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                color: var(--clr-purple);
+
+                svg {
+                  fill: var(--clr-purple);
+                }
+              }
+
+              .educationContent {
+                width: 80%;
+                height: 80%;
+                font-size: 1.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                color: var(--clr-subDark);
+
+                margin: 0 auto;
+
+                li {
+                  height: 5vh;
+                  line-height: 2em;
+                }
+              }
+            }
+
+            .experience {
+              width: 100%;
+              height: 40%;
+              display: flex;
+              flex-direction: column;
+
+              .experienceTitle {
+                width: 20%;
+                font-size: 1.5em;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                color: var(--clr-purple);
+
+                svg {
+                  fill: var(--clr-purple);
+                }
+              }
+
+              .experienceContent {
+                width: 80%;
+                height: 80%;
+                font-size: 1.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                color: var(--clr-subDark);
+                margin: 0 auto;
+
+                li {
+                  height: 5vh;
+                  line-height: 2em;
+                }
+              }
+            }
+          }
+
+          .col2 {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 2em;
+            margin-top: 5em;
+
+            .capability {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+
+              .capabilityTitle {
+                width: 40%;
+                font-size: 1.5em;
+                display: flex;
+                align-items: center;
+                color: var(--clr-purple);
+
+                svg {
+                  margin-right: 1em;
+                  stroke: var(--clr-purple);
+                }
+              }
+
+              .capabilityContent {
+                width: 90%;
+                height: 70%;
+                font-size: 1.5em;
+                background-color: var(--clr-purple);
+                border-radius: 1em;
+                margin-top: 1em;
+                color: var(--clr-white);
+                padding: 2em;
+                line-height: 2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .serviceSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5em;
+
+    .serviceTitle {
+      width: 100%;
+      height: 10vh;
+      color: var(--clr-purple);
+      font-size: 3em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-left: 1em;
+      margin-bottom: 1em;
+
+      div {
+        padding-left: 0.1em;
+      }
+
+      .titleStyle {
+        width: 25%;
+        background-color: var(--clr-white);
+        padding: 0.1em;
+        border: 2px solid var(--clr-purple);
+        border-radius: 1em;
+      }
+    }
+
+    .serviceContent {
+      width: 95%;
+      height: 90vh;
+      margin: 0 auto;
+      background-color: var(--clr-purple);
+      border-radius: 0.5em;
+      display: flex;
+      flex-direction: column;
+
+      .row1 {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        padding: 3em;
+
+        .serviceProvide {
+          width: 70%;
+          height: 100%;
+          font-size: 2em;
+          color: var(--clr-white);
+
+          ol {
+            padding: 1em;
+
+            li {
+              line-height: 1.5em;
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .btnContainer {
+          width: 30%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          font-size: 2em;
+          color: var(--clr-white);
+
+          .btn {
+            width: 50%;
+            height: 20%;
+            background-color: var(--clr-white);
+            cursor: pointer;
+            color: var(--clr-purple);
+            border-radius: 0.3em;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 1em;
+            margin-top: 1em;
+          }
+        }
+      }
+
+      .row2 {
+        width: 100%;
+        height: 50%;
+        display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-top: 3em;
 
-        .heroContent{
-            width: 40%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            .welcome{
-                width: 100%;
-                color: var(--colorPri);
-                font-size: 3em;
-                line-height: 1.5em;
-                display: flex;
+        .box {
+          width: 30%;
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          color: var(--clr-white);
+
+          .boxImage {
+            width: 50%;
+            height: 30%;
+            margin-bottom: 3em;
+
+            img {
+              height: 100%;
             }
+          }
 
-            .quote{
-                width: 100%;
-                margin-top: 1em;
-                color: var(--subColor);
-                font-size: 2em;
-            }
+          .boxName {
+            height: 15%;
+            font-size: 1.5em;
+            font-weight: bold;
+          }
 
-            .talkBtnContainer{
-                width: 50%;
-                display: flex;
-                justify-content: flex-end;
-                margin-top: 1em;
-
-                .talkBtn{
-                    width: 10em;
-                    padding: .8em;
-                    background-color: var(--colorPri);
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    color: var(--colorWhite);
-                    font-size: 1.5em;
-                    border-radius: .5em;
-                    margin-top: 1em;
-                }
-            }
-
-            .inspiration{
-                width: 100%;
-                color: var(--subColorDark);
-                font-size: 3em;
-                line-height: 1.5em;
-            }
+          .boxContent {
+            height: 30%;
+            font-size: 1.5em;
+          }
         }
-
-        .heroImage{
-            width: 40%;
-            height: 100%;
-
-            .img{
-                width: 85%;
-                // height: 100%;
-                border-radius: 1em;
-            }
-        }
+      }
     }
-
-    .heroSection::after{
-        content: '';
-        width: 0;
-        height: 5vh;
-        rotate: -5deg;
-        background-color: var(--colorPri);
-        position: absolute;
-        bottom: 10em;
-        display: flex;
-        align-items: center;
-        margin-top: 5em;
-        padding-left: 10em;
-        color: var(--colorWhite);
-        animation: banner 3s linear forwards;
-    }
-
-    @keyframes banner {
-        0% {
-            width: 0vw;
-        }
-        100% {
-            content: 'Metaphorlism will make your metaphors into reality !!!';
-            width: 101vw;
-        }
-    }
-
-    .teamSection{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        
-        .teamTitle{
-            width: 100%;
-            height: 10vh;
-            color: var(--colorPri);
-            font-size: 3em;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            padding-left: 1em;
-            margin-bottom: 1em;
-
-            div{
-                padding-left: 0.1em;
-            }
-
-            .titleStyle{
-                width: 25%;
-                background-color: var(--colorWhite);
-                padding: .1em;
-                border: 2px solid var(--colorPri);
-                border-radius: 1em;
-            }
-        }
-
-        .team{
-            width: 100%;
-            height: 80%;
-            display: flex;
-            flex-direction: column;
-            
-            .memberPriCol{
-                width: 100%;
-                height: 100vh;
-                background-color: var(--colorPri);
-                margin-top: 1em;
-                display: flex;
-                flex-direction: column;
-                padding-top: 2em;
-                
-                .profile{
-                    width: 50%;
-                    height: 20%;
-                    display: flex;
-                    
-                    .profileImg{
-                        width: 25%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        
-                        .img{
-                            height: 100%;
-                            border-radius: 50%;
-        
-                        }
-                    }
-
-                    .profileText{
-                        width: 40%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        line-height: 3em;
-                        color: var(--colorWhite);
-                        
-                        .name{
-                            width: 100%;
-                            font-size: 2em;
-                            font-weight: bold;
-                        }
-    
-                        .age{
-                            width: 100%;
-                            font-size: 2em;
-                        }
-                    }
-                }
-
-                .memberContent{
-                    width: 100%;
-                    height: 80%;
-                    display: flex;
-
-                    .col1{
-                        width: 50%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        padding-left: 2em;
-                        margin-top: 5em;
-
-                        .education{
-                            width: 100%;
-                            height: 40%;
-                            display: flex;
-                            flex-direction: column;
-                            
-                            .educationTitle{
-                                width: 20%;
-                                font-size: 1.5em;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-evenly;
-                                color: var(--colorWhite);
-                                
-                                svg{
-                                    fill: var(--colorWhite);
-                                }
-                            }
-
-                            .educationContent{
-                                width: 80%;
-                                height: 80%;
-                                font-size: 1.5em;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                                color: var(--colorWhite);
-                                
-                                margin: 0 auto;
-
-                                li{
-                                    height: 5vh;
-                                    line-height: 2em;
-                                }
-                            }
-                        }
-    
-                        .experience{
-                            width: 100%;
-                            height: 40%;
-                            display: flex;
-                            flex-direction: column;
-                            
-                            .experienceTitle{
-                                width: 20%;
-                                font-size: 1.5em;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-evenly;
-                                color: var(--colorWhite);
-
-                                svg{
-                                    fill: var(--colorWhite);
-                                }
-                            }
-
-                            .experienceContent{
-                                width: 80%;
-                                height: 80%;
-                                font-size: 1.5em;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                                color: var(--colorWhite);
-                                
-                                margin: 0 auto;
-
-                                li{
-                                    height: 5vh;
-                                    line-height: 2em;
-                                }
-                            }
-                        }
-
-                    }
-
-                    .col2{
-                        width: 50%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        padding-left: 2em;
-                        margin-top: 5em;
-
-                        .capability{
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-
-                            .capabilityTitle{
-                                width: 40%;
-                                font-size: 1.5em;
-                                display: flex;
-                                align-items: center;
-                                color: var(--colorWhite);
-                                
-                                svg{
-                                    margin-right: 1em;
-                                    stroke: var(--colorWhite);
-                                }
-                            }
-
-                            .capabilityContent{
-                                width: 90%;
-                                height: 70%;
-                                font-size: 1.5em;
-                                background-color: var(--colorWhite);
-                                border-radius: 1em;
-                                margin-top: 1em;
-                                color: var(--colorPri);
-                                padding: 2em;
-                                line-height: 2em;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .memberWhiCol{
-                width: 100%;
-                height: 100vh;
-                background-color: var(--background);
-                margin-top: 1em;
-                display: flex;
-                flex-direction: column;
-                padding-top: 2em;
-                
-                .profile{
-                    width: 50%;
-                    height: 20%;
-                    display: flex;
-                    
-                    .profileImg{
-                        width: 25%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        
-                        .img{
-                            height: 100%;
-                            border-radius: 50%;
-        
-                        }
-                    }
-
-                    .profileText{
-                        width: 40%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        line-height: 3em;
-                        color: var(--subColorDark);
-                        
-                        .name{
-                            width: 100%;
-                            font-size: 2em;
-                            font-weight: bold;
-                        }
-    
-                        .age{
-                            width: 100%;
-                            font-size: 2em;
-                        }
-                    }
-                }
-
-                .memberContent{
-                    width: 100%;
-                    height: 80%;
-                    display: flex;
-
-                    .col1{
-                        width: 50%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        padding-left: 2em;
-                        margin-top: 5em;
-
-                        .education{
-                            width: 100%;
-                            height: 40%;
-                            display: flex;
-                            flex-direction: column;
-                            
-                            .educationTitle{
-                                width: 20%;
-                                font-size: 1.5em;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-evenly;
-                                color: var(--colorPri);
-                                
-                                svg{
-                                    fill: var(--colorPri);
-                                }
-                            }
-
-                            .educationContent{
-                                width: 80%;
-                                height: 80%;
-                                font-size: 1.5em;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                                color: var(--subColorDark);
-                                
-                                margin: 0 auto;
-
-                                li{
-                                    height: 5vh;
-                                    line-height: 2em;
-                                }
-                            }
-                        }
-    
-                        .experience{
-                            width: 100%;
-                            height: 40%;
-                            display: flex;
-                            flex-direction: column;
-                            
-                            .experienceTitle{
-                                width: 20%;
-                                font-size: 1.5em;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-evenly;
-                                color: var(--colorPri);
-                            
-
-                                svg{
-                                    fill: var(--colorPri);
-                                }
-                            }
-
-                            .experienceContent{
-                                width: 80%;
-                                height: 80%;
-                                font-size: 1.5em;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                                color: var(--subColorDark);
-                                margin: 0 auto;
-
-                                li{
-                                    height: 5vh;
-                                    line-height: 2em;
-                                }
-                            }
-                        }
-
-                    }
-
-                    .col2{
-                        width: 50%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        padding-left: 2em;
-                        margin-top: 5em;
-
-                        .capability{
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-
-                            .capabilityTitle{
-                                width: 40%;
-                                font-size: 1.5em;
-                                display: flex;
-                                align-items: center;
-                                color: var(--colorPri);
-                                
-                                svg{
-                                    margin-right: 1em;
-                                    stroke: var(--colorPri);
-                                }
-                            }
-
-                            .capabilityContent{
-                                width: 90%;
-                                height: 70%;
-                                font-size: 1.5em;
-                                background-color: var(--colorPri);
-                                border-radius: 1em;
-                                margin-top: 1em;
-                                color: var(--colorWhite);
-                                padding: 2em;
-                                line-height: 2em;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    
-    }
-
-    .serviceSection{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5em;
-
-        .serviceTitle{
-            width: 100%;
-            height: 10vh;
-            color: var(--colorPri);
-            font-size: 3em;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            padding-left: 1em;
-            margin-bottom: 1em;
-
-            div{
-                padding-left: 0.1em;
-            }
-
-            .titleStyle{
-                width: 25%;
-                background-color: var(--colorWhite);
-                padding: .1em;
-                border: 2px solid var(--colorPri);
-                border-radius: 1em;
-            }
-        }
-
-        .serviceContent{
-            width: 95%;
-            height: 90vh;
-            margin: 0 auto;
-            background-color: var(--colorPri);
-            border-radius: .5em;
-            display: flex;
-            flex-direction: column;
-
-            .row1{
-                width: 100%;
-                height: 50%;
-                display: flex;
-                padding: 3em;
-
-                .serviceProvide{
-                    width: 70%;
-                    height: 100%;
-                    font-size: 2em;
-                    color: var(--colorWhite);
-
-                    ol{
-                        padding: 1em;
-
-                        li{
-                            line-height: 1.5em;
-                            opacity: .8;
-                        }
-                    }
-                }
-
-                .btnContainer{
-                    width: 30%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    font-size: 2em;
-                    color: var(--colorWhite);
-
-                    .btn{
-                        width: 50%;
-                        height: 20%;
-                        background-color: var(--colorWhite);
-                        cursor: pointer;
-                        color: var(--colorPri);
-                        border-radius:.3em;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        font-size: 1em;
-                        margin-top: 1em;
-                    }
-                }
-            }
-
-            .row2{
-                width: 100%;
-                height: 50%;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-
-                .box{
-                    width: 30%;
-                    height: 80%;
-                    display: flex;
-                    flex-direction: column;
-                    color: var(--colorWhite);
-
-                    .boxImage{
-                        width: 50%;
-                        height: 30%;
-                        margin-bottom: 3em;
-
-                        img{
-                            height: 100%;
-                        }
-                    }
-
-                    .boxName{
-                        height: 15%;
-                        font-size: 1.5em;
-                        font-weight: bold;
-                    }
-
-                    .boxContent{
-                        height: 30%;
-                        font-size: 1.5em;
-                    }
-                }
-            }
-        }
-    }
+  }
 }

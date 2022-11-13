@@ -1,0 +1,154 @@
+.service {
+  padding: 0 2em;
+  margin-bottom: 3em;
+
+  .serviceName {
+    position: relative;
+    color: var(--clr-purple);
+    font-weight: 400;
+    font-size: 3em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 65%;
+      bottom: 0;
+      top: 90%;
+      border: 2px solid var(--clr-purple);
+      border-radius: 10px;
+      background-color: var(--clr-white);
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 2em;
+
+    .imageSection {
+      img {
+        display: block;
+        width: 25em;
+        height: 25em;
+        background-color: black;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .action {
+        display: flex;
+        padding: 0.5em 0;
+        font-size: 1.4em;
+
+        .optionSelector {
+          position: relative;
+          width: 70%;
+          background-color: #fff;
+          padding: 0 0.5em;
+          border-radius: 10px;
+
+          .active {
+            svg {
+              transform: rotateX(180deg);
+            }
+          }
+
+          .option {
+            position: absolute;
+            bottom: 100%;
+            z-index: 10;
+            list-style: none;
+            background-color: var(--clr-white);
+            left: 0;
+            right: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: scale 0.2s ease-in-out, translate 0.3s ease-in-out;
+
+            li {
+              padding: 0 0.5em;
+              cursor: pointer;
+
+              &:hover {
+                background-color: rgb(182, 182, 182);
+              }
+            }
+          }
+
+          svg {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            fill: black;
+            scale: 0.6;
+            rotate: 180deg;
+            cursor: pointer;
+          }
+        }
+
+        .buy {
+          margin-left: auto;
+          cursor: pointer;
+          padding: 0 2em;
+          background-color: var(--clr-purple);
+          color: var(--clr-white);
+          font-size: 0.7em;
+          border-radius: 10px;
+
+          border: 0;
+        }
+      }
+    }
+
+    .package {
+      width: 25em;
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 0.5em;
+      position: relative;
+
+      .priceTag {
+        position: absolute;
+        font-size: 1.5em;
+        right: 0.8em;
+        top: 0.5em;
+        line-height: 1.2em;
+        background-color: var(--clr-purple);
+        color: var(--clr-white);
+        padding: 0 0.8em;
+        border-radius: 10px;
+      }
+
+      .name {
+        color: var(--clr-purple);
+        font-weight: 400;
+      }
+
+      .description,
+      li {
+        font-size: 1.1em;
+      }
+
+      .list {
+        font-size: 1.3em;
+        color: var(--clr-purple);
+      }
+
+      li {
+        list-style: disc;
+        margin-left: 1.5em;
+      }
+
+      .duration {
+        position: absolute;
+        bottom: 0.3em;
+        left: 0.7em;
+        font-size: 1.3em;
+      }
+    }
+  }
+}

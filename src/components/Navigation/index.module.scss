@@ -1,13 +1,15 @@
 .container {
-  background-color: #eeeeee;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   font-family: "Jaldi", sans-serif;
   font-size: 1.1em;
+  background-color: #eeeeee;
   align-items: center;
   padding: 1em 1.5em;
   gap: 1em;
-  position: fixed;
-  width: 100%;
+  z-index: 1000;
 
   .logo {
     display: flex;
@@ -126,7 +128,7 @@ div.link.clickAnimation {
     bottom: 0.3em;
     z-index: -1;
 
-    animation: ClickLink .1s ease forwards;
+    animation: ClickLink 0.1s ease forwards;
   }
 
   &::after {

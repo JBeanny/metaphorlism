@@ -18,8 +18,12 @@
 :root {
   --clr-purple: #7743db;
   --clr-background: #eeeeee;
+  --clr-white: #fff;
+  --clr-sub: #383838a1;
+  --clr-subDark: #383838cd;
 
   background-color: var(--clr-background);
+  font-family: "Jaldi", sans-serif;
 }
 
 .no-select {

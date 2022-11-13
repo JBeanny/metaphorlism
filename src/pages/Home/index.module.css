@@ -1,21 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Jaldi&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  --colorPri: #7743DB;
-  --background: #EEEEEE;
-  --subColor: #383838a1;
-  --subColorDark: #383838cd;
-  --colorWhite: #FFFFFF;
-  font-family: "Jaldi", sans-serif;
-}
-
 .container {
   width: 100vw;
   height: 100%;
-  background-color: var(--background);
+  background-color: var(--clr-background);
   display: flex;
   flex-direction: column;
 }
@@ -37,7 +23,7 @@
 }
 .container .heroSection .heroContent .welcome {
   width: 100%;
-  color: var(--colorPri);
+  color: var(--clr-purple);
   font-size: 3em;
   line-height: 1.5em;
   display: flex;
@@ -45,7 +31,7 @@
 .container .heroSection .heroContent .quote {
   width: 100%;
   margin-top: 1em;
-  color: var(--subColor);
+  color: var(--clr-sub);
   font-size: 2em;
 }
 .container .heroSection .heroContent .talkBtnContainer {
@@ -57,18 +43,18 @@
 .container .heroSection .heroContent .talkBtnContainer .talkBtn {
   width: 10em;
   padding: 0.8em;
-  background-color: var(--colorPri);
+  background-color: var(--clr-purple);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: var(--colorWhite);
+  color: var(--clr-white);
   font-size: 1.5em;
   border-radius: 0.5em;
   margin-top: 1em;
 }
 .container .heroSection .heroContent .inspiration {
   width: 100%;
-  color: var(--subColorDark);
+  color: var(--clr-subDark);
   font-size: 3em;
   line-height: 1.5em;
 }
@@ -85,14 +71,14 @@
   width: 0;
   height: 5vh;
   rotate: -5deg;
-  background-color: var(--colorPri);
+  background-color: var(--clr-purple);
   position: absolute;
   bottom: 10em;
   display: flex;
   align-items: center;
   margin-top: 5em;
   padding-left: 10em;
-  color: var(--colorWhite);
+  color: var(--clr-white);
   -webkit-animation: banner 3s linear forwards;
           animation: banner 3s linear forwards;
 }
@@ -123,7 +109,7 @@
 .container .teamSection .teamTitle {
   width: 100%;
   height: 10vh;
-  color: var(--colorPri);
+  color: var(--clr-purple);
   font-size: 3em;
   display: flex;
   flex-direction: column;
@@ -136,9 +122,9 @@
 }
 .container .teamSection .teamTitle .titleStyle {
   width: 25%;
-  background-color: var(--colorWhite);
+  background-color: var(--clr-white);
   padding: 0.1em;
-  border: 2px solid var(--colorPri);
+  border: 2px solid var(--clr-purple);
   border-radius: 1em;
 }
 .container .teamSection .team {
@@ -150,7 +136,7 @@
 .container .teamSection .team .memberPriCol {
   width: 100%;
   height: 100vh;
-  background-color: var(--colorPri);
+  background-color: var(--clr-purple);
   margin-top: 1em;
   display: flex;
   flex-direction: column;
@@ -180,7 +166,7 @@
   justify-content: center;
   align-items: center;
   line-height: 3em;
-  color: var(--colorWhite);
+  color: var(--clr-white);
 }
 .container .teamSection .team .memberPriCol .profile .profileText .name {
   width: 100%;
@@ -216,10 +202,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--colorWhite);
+  color: var(--clr-white);
 }
 .container .teamSection .team .memberPriCol .memberContent .col1 .education .educationTitle svg {
-  fill: var(--colorWhite);
+  fill: var(--clr-white);
 }
 .container .teamSection .team .memberPriCol .memberContent .col1 .education .educationContent {
   width: 80%;
@@ -228,7 +214,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  color: var(--colorWhite);
+  color: var(--clr-white);
   margin: 0 auto;
 }
 .container .teamSection .team .memberPriCol .memberContent .col1 .education .educationContent li {
@@ -247,10 +233,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--colorWhite);
+  color: var(--clr-white);
 }
 .container .teamSection .team .memberPriCol .memberContent .col1 .experience .experienceTitle svg {
-  fill: var(--colorWhite);
+  fill: var(--clr-white);
 }
 .container .teamSection .team .memberPriCol .memberContent .col1 .experience .experienceContent {
   width: 80%;
@@ -259,7 +245,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  color: var(--colorWhite);
+  color: var(--clr-white);
   margin: 0 auto;
 }
 .container .teamSection .team .memberPriCol .memberContent .col1 .experience .experienceContent li {
@@ -285,27 +271,27 @@
   font-size: 1.5em;
   display: flex;
   align-items: center;
-  color: var(--colorWhite);
+  color: var(--clr-white);
 }
 .container .teamSection .team .memberPriCol .memberContent .col2 .capability .capabilityTitle svg {
   margin-right: 1em;
-  stroke: var(--colorWhite);
+  stroke: var(--clr-white);
 }
 .container .teamSection .team .memberPriCol .memberContent .col2 .capability .capabilityContent {
   width: 90%;
   height: 70%;
   font-size: 1.5em;
-  background-color: var(--colorWhite);
+  background-color: var(--clr-white);
   border-radius: 1em;
   margin-top: 1em;
-  color: var(--colorPri);
+  color: var(--clr-purple);
   padding: 2em;
   line-height: 2em;
 }
 .container .teamSection .team .memberWhiCol {
   width: 100%;
   height: 100vh;
-  background-color: var(--background);
+  background-color: var(--clr-background);
   margin-top: 1em;
   display: flex;
   flex-direction: column;
@@ -335,7 +321,7 @@
   justify-content: center;
   align-items: center;
   line-height: 3em;
-  color: var(--subColorDark);
+  color: var(--clr-subDark);
 }
 .container .teamSection .team .memberWhiCol .profile .profileText .name {
   width: 100%;
@@ -371,10 +357,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--colorPri);
+  color: var(--clr-purple);
 }
 .container .teamSection .team .memberWhiCol .memberContent .col1 .education .educationTitle svg {
-  fill: var(--colorPri);
+  fill: var(--clr-purple);
 }
 .container .teamSection .team .memberWhiCol .memberContent .col1 .education .educationContent {
   width: 80%;
@@ -383,7 +369,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  color: var(--subColorDark);
+  color: var(--clr-subDark);
   margin: 0 auto;
 }
 .container .teamSection .team .memberWhiCol .memberContent .col1 .education .educationContent li {
@@ -402,10 +388,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--colorPri);
+  color: var(--clr-purple);
 }
 .container .teamSection .team .memberWhiCol .memberContent .col1 .experience .experienceTitle svg {
-  fill: var(--colorPri);
+  fill: var(--clr-purple);
 }
 .container .teamSection .team .memberWhiCol .memberContent .col1 .experience .experienceContent {
   width: 80%;
@@ -414,7 +400,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  color: var(--subColorDark);
+  color: var(--clr-subDark);
   margin: 0 auto;
 }
 .container .teamSection .team .memberWhiCol .memberContent .col1 .experience .experienceContent li {
@@ -440,20 +426,20 @@
   font-size: 1.5em;
   display: flex;
   align-items: center;
-  color: var(--colorPri);
+  color: var(--clr-purple);
 }
 .container .teamSection .team .memberWhiCol .memberContent .col2 .capability .capabilityTitle svg {
   margin-right: 1em;
-  stroke: var(--colorPri);
+  stroke: var(--clr-purple);
 }
 .container .teamSection .team .memberWhiCol .memberContent .col2 .capability .capabilityContent {
   width: 90%;
   height: 70%;
   font-size: 1.5em;
-  background-color: var(--colorPri);
+  background-color: var(--clr-purple);
   border-radius: 1em;
   margin-top: 1em;
-  color: var(--colorWhite);
+  color: var(--clr-white);
   padding: 2em;
   line-height: 2em;
 }
@@ -467,7 +453,7 @@
 .container .serviceSection .serviceTitle {
   width: 100%;
   height: 10vh;
-  color: var(--colorPri);
+  color: var(--clr-purple);
   font-size: 3em;
   display: flex;
   flex-direction: column;
@@ -480,16 +466,16 @@
 }
 .container .serviceSection .serviceTitle .titleStyle {
   width: 25%;
-  background-color: var(--colorWhite);
+  background-color: var(--clr-white);
   padding: 0.1em;
-  border: 2px solid var(--colorPri);
+  border: 2px solid var(--clr-purple);
   border-radius: 1em;
 }
 .container .serviceSection .serviceContent {
   width: 95%;
   height: 90vh;
   margin: 0 auto;
-  background-color: var(--colorPri);
+  background-color: var(--clr-purple);
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
@@ -504,7 +490,7 @@
   width: 70%;
   height: 100%;
   font-size: 2em;
-  color: var(--colorWhite);
+  color: var(--clr-white);
 }
 .container .serviceSection .serviceContent .row1 .serviceProvide ol {
   padding: 1em;
@@ -519,14 +505,14 @@
   display: flex;
   flex-direction: column;
   font-size: 2em;
-  color: var(--colorWhite);
+  color: var(--clr-white);
 }
 .container .serviceSection .serviceContent .row1 .btnContainer .btn {
   width: 50%;
   height: 20%;
-  background-color: var(--colorWhite);
+  background-color: var(--clr-white);
   cursor: pointer;
-  color: var(--colorPri);
+  color: var(--clr-purple);
   border-radius: 0.3em;
   display: flex;
   align-items: center;
@@ -546,7 +532,7 @@
   height: 80%;
   display: flex;
   flex-direction: column;
-  color: var(--colorWhite);
+  color: var(--clr-white);
 }
 .container .serviceSection .serviceContent .row2 .box .boxImage {
   width: 50%;
