@@ -1,6 +1,8 @@
 import Hero from "./images/HeroImg.avif";
 import Sotharoth from "./images/Sotharoth.jpg";
 import Tangmeng from "./images/Tangmeng.avif";
+import ChanEy from "./images/chaney.jpg";
+import Theary from "./images/theary.jpg";
 import EducationIcon from "./svg/EducationIcon";
 import ExperienceIcon from "./svg/ExperienceIcon";
 import CapabilityIcon from "./svg/CapabilityIcon";
@@ -30,6 +32,8 @@ export {
   Hero,
   Sotharoth,
   Tangmeng,
+  ChanEy,
+  Theary,
   EducationIcon,
   ExperienceIcon,
   CapabilityIcon,
