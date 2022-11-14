@@ -77,18 +77,18 @@ const member = [
     education: [
       "Currently a junior of Royal University of Phnom Pneh (RUPP) of Department of Computer Science",
       "Certified in Microsoft Offices",
-      "5.5 bands on IELTS Test"
     ],
     experience: [
-      "Volunteered in Decoration Team for RYL Cambodia with Food and Book Fair at ICA",
+      "Volunteered in Expo Calling and Propsing for Genius's Table",
       "Represent School to join the exhibition at Sisovath Highschool with STEM Topic",
       "Joint STEM Sister for Cambodia and Leaded School's Club",
     ],
     capability: `
-            I am a Frontend Web Developer. I am capable of
-            building and designing modern webs. 
-            
-            I have skill in HTML/CSS/JavaScript, JQuery, Bootstrap,
+            As a beginner in this field, I always striving and keeping up
+            with the new technologies. Working with different programming 
+            languages has become a very great challenge for me.
+
+            My skills are HTML, CSS, JavaScript, Bootstrap, JQuery, ReactJS,
             NodeJS, ExpressJS, and MySQL.
         `,
   },

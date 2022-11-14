@@ -716,132 +716,89 @@
     //done
   
     .teamSection {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
   
       .teamTitle {
         width: 100%;
         height: 10vh;
-        color: var(--clr-purple);
-        font-size: 3em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding-left: 1em;
-        margin-bottom: 1em;
-  
-        div {
-          padding-left: 0.1em;
-        }
+        font-size: 2em;
+        padding-left: .5em;
   
         .titleStyle {
-          width: 25%;
-          background-color: var(--clr-white);
-          padding: 0.1em;
-          border: 2px solid var(--clr-purple);
-          border-radius: 1em;
+          width: 75%;
         }
       }
   
       .team {
-        width: 100%;
-        height: 80%;
-        display: flex;
-        flex-direction: column;
   
         .memberPriCol {
-          width: 100%;
-          height: 100vh;
-          background-color: var(--clr-purple);
-          margin-top: 1em;
-          display: flex;
-          flex-direction: column;
-          padding-top: 2em;
-          margin-bottom: 1em;
-  
+          padding-top: 0;
+          margin-bottom: 0;
+
           .profile {
-            width: 50%;
+            width: 100%;
             height: 20%;
-            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
   
             .profileImg {
-              width: 25%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              width: 100%;
+              height: 70%;
   
               .img {
-                height: 100%;
+                width: 100px;
+                height: 100px;
                 border-radius: 50%;
               }
             }
   
             .profileText {
-              width: 40%;
-              height: 100%;
+              width: 100%;
+              height: 30%;
+              line-height: 2em;
               display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              line-height: 3em;
-              color: var(--clr-white);
+              text-align: center;
   
               .name {
-                width: 100%;
-                font-size: 2em;
-                font-weight: bold;
+                font-size: 1.5em;
               }
   
               .age {
-                width: 100%;
-                font-size: 2em;
+                font-size: 1em;
               }
             }
           }
   
           .memberContent {
-            width: 100%;
-            height: 80%;
-            display: flex;
+            flex-direction: column;
   
             .col1 {
-              width: 50%;
-              height: 100%;
+              width: 100%;
+              height: 50%;
               display: flex;
               flex-direction: column;
-              padding-left: 2em;
-              margin-top: 5em;
+              margin-top: 0em;
+              padding-left: 0;
+              padding: 2em;
   
               .education {
-                width: 100%;
-                height: 40%;
-                display: flex;
-                flex-direction: column;
   
                 .educationTitle {
-                  width: 20%;
+                  width: 100%;
                   font-size: 1.5em;
                   display: flex;
+                  justify-content: center;
                   align-items: center;
-                  justify-content: space-evenly;
-                  color: var(--clr-white);
-  
-                  svg {
-                    fill: var(--clr-white);
+                
+
+                  svg{
+                    margin-right: 1em;
                   }
                 }
   
                 .educationContent {
-                  width: 80%;
-                  height: 80%;
-                  font-size: 1.5em;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-evenly;
-                  color: var(--clr-white);
+                  width: 100%;
+                  font-size: 1em;
   
                   margin: 0 auto;
   
@@ -870,63 +827,50 @@
               }
   
               .experience {
-                width: 100%;
-                height: 40%;
-                display: flex;
-                flex-direction: column;
   
                 .experienceTitle {
-                  width: 20%;
+                  width: 100%;
                   font-size: 1.5em;
                   display: flex;
                   align-items: center;
-                  justify-content: space-evenly;
-                  color: var(--clr-white);
-  
-                  svg {
-                    fill: var(--clr-white);
+                  justify-content: center;
+                  margin-top: 1em;
+
+                  svg{
+                    margin-right: 1em;
                   }
                 }
   
                 .experienceContent {
-                  width: 80%;
+                  width: 100%;
                   height: 80%;
-                  font-size: 1.5em;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-evenly;
-                  color: var(--clr-white);
-  
-                  margin: 0 auto;
-  
-                  li {
-                    height: 5vh;
-                    line-height: 2em;
+                  font-size: 1em;
+                  margin-top: 1em;
+
+                  li{
+                    width: 100%;
+                    line-height: 1.2em;
                   }
                 }
               }
             }
   
             .col2 {
-              width: 50%;
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-              padding-left: 2em;
-              margin-top: 5em;
+              width: 100%;
+              height: 50%;
+              padding-left: 0em;
+              margin-top: 0em;
   
               .capability {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
+                justify-content: center;
+                align-items: center;
   
                 .capabilityTitle {
-                  width: 40%;
+                  width: 100%;
                   font-size: 1.5em;
                   display: flex;
+                  justify-content: center;
                   align-items: center;
-                  color: var(--clr-white);
   
                   svg {
                     margin-right: 1em;
@@ -935,200 +879,184 @@
                 }
   
                 .capabilityContent {
-                  width: 90%;
                   height: 70%;
-                  font-size: 1.5em;
-                  background-color: var(--clr-white);
-                  border-radius: 1em;
-                  margin-top: 1em;
-                  color: var(--clr-purple);
-                  padding: 2em;
-                  line-height: 2em;
+                  font-size: 1em;
+                  border-radius: 10px;
+                  margin-top: 0em;
+                  padding: 1em;
+                  line-height: 1.2em;
                 }
               }
             }
           }
         }
-  
+
         .memberWhiCol {
-          width: 100%;
-          height: 100vh;
-          background-color: var(--clr-background);
-          margin-top: 1em;
-          display: flex;
-          flex-direction: column;
-          padding-top: 2em;
-  
+          padding-top: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+
           .profile {
-            width: 50%;
+            width: 100%;
             height: 20%;
-            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
   
             .profileImg {
-              width: 25%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              width: 100%;
+              height: 70%;
   
               .img {
-                height: 100%;
+                width: 100px;
+                height: 100px;
                 border-radius: 50%;
               }
             }
   
             .profileText {
-              width: 40%;
-              height: 100%;
+              width: 100%;
+              height: 30%;
+              line-height: 2em;
               display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              line-height: 3em;
-              color: var(--clr-subDark);
+              text-align: center;
   
               .name {
-                width: 100%;
-                font-size: 2em;
-                font-weight: bold;
+                font-size: 1.5em;
               }
   
               .age {
-                width: 100%;
-                font-size: 2em;
+                font-size: 1em;
               }
             }
           }
   
           .memberContent {
-            width: 100%;
-            height: 80%;
-            display: flex;
+            flex-direction: column;
   
             .col1 {
-              width: 50%;
-              height: 100%;
+              width: 100%;
+              height: 50%;
               display: flex;
               flex-direction: column;
-              padding-left: 2em;
-              margin-top: 5em;
+              margin-top: 0em;
+              padding-left: 0;
+              padding: 2em;
   
               .education {
-                width: 100%;
-                height: 40%;
-                display: flex;
-                flex-direction: column;
+                margin-top: 0;
   
                 .educationTitle {
-                  width: 20%;
+                  width: 100%;
                   font-size: 1.5em;
                   display: flex;
+                  justify-content: center;
                   align-items: center;
-                  justify-content: space-evenly;
-                  color: var(--clr-purple);
-  
-                  svg {
-                    fill: var(--clr-purple);
+                
+
+                  svg{
+                    margin-right: 1em;
                   }
                 }
   
                 .educationContent {
-                  width: 80%;
-                  height: 80%;
-                  font-size: 1.5em;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-evenly;
-                  color: var(--clr-subDark);
-  
+                  width: 100%;
+                  font-size: 1em;
                   margin: 0 auto;
+
+                  li{
+                    margin-top: 1em;
+                  }
   
-                  li {
-                    height: 5vh;
-                    line-height: 2em;
+                  .talkBtn {
+                    width: 10em;
+                    padding: 0.8em;
+                    background-color: var(--clr-purple);
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    color: var(--clr-white);
+                    font-size: 1.5em;
+                    border-radius: 0.5em;
+                    margin-top: 1em;
+                    cursor: pointer;
+                    border: 2px solid var(--clr-purple);
+                    transition: 0.3s all ease;
+  
+                    &:hover {
+                      background-color: transparent;
+                      border: 2px solid #383838;
+                      color: #383838;
+                    }
                   }
                 }
               }
   
               .experience {
-                width: 100%;
-                height: 40%;
-                display: flex;
-                flex-direction: column;
-  
+                margin-top: 0.5em;
+
                 .experienceTitle {
-                  width: 20%;
+                  width: 100%;
                   font-size: 1.5em;
                   display: flex;
                   align-items: center;
-                  justify-content: space-evenly;
-                  color: var(--clr-purple);
-  
-                  svg {
-                    fill: var(--clr-purple);
+                  justify-content: center;
+                  margin-top: 1em;
+
+                  svg{
+                    margin-right: 1em;
                   }
                 }
   
                 .experienceContent {
-                  width: 80%;
+                  width: 100%;
                   height: 80%;
-                  font-size: 1.5em;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-evenly;
-                  color: var(--clr-subDark);
-                  margin: 0 auto;
-  
-                  li {
-                    height: 5vh;
-                    line-height: 2em;
+                  font-size: 1em;
+                  margin-top: 1em;
+
+                  li{
+                    line-height: 1.5em;
                   }
+
                 }
               }
             }
   
             .col2 {
-              width: 50%;
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-              padding-left: 2em;
-              margin-top: 5em;
+              width: 100%;
+              height: 50%;
+              padding-left: 0em;
+              margin-top: 0em;
   
               .capability {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
+                justify-content: center;
+                align-items: center;
   
                 .capabilityTitle {
-                  width: 40%;
+                  width: 100%;
                   font-size: 1.5em;
                   display: flex;
+                  justify-content: center;
                   align-items: center;
-                  color: var(--clr-purple);
   
                   svg {
                     margin-right: 1em;
-                    stroke: var(--clr-purple);
                   }
                 }
   
                 .capabilityContent {
-                  width: 90%;
                   height: 70%;
-                  font-size: 1.5em;
-                  background-color: var(--clr-purple);
-                  border-radius: 1em;
-                  margin-top: 1em;
-                  color: var(--clr-white);
-                  padding: 2em;
-                  line-height: 2em;
+                  font-size: 1em;
+                  border-radius: 10px;
+                  margin-top: 0em;
+                  padding: 1em;
+                  line-height: 1.2em;
                 }
               }
             }
           }
         }
+  
       }
     }
   
@@ -1140,49 +1068,22 @@
       margin-bottom: 5em;
   
       .serviceTitle {
-        width: 100%;
-        height: 10vh;
-        color: var(--clr-purple);
-        font-size: 3em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding-left: 1em;
-        margin-bottom: 1em;
-  
-        div {
-          padding-left: 0.1em;
-        }
+        font-size: 2em;
   
         .titleStyle {
-          width: 25%;
-          background-color: var(--clr-white);
-          padding: 0.1em;
-          border: 2px solid var(--clr-purple);
-          border-radius: 1em;
+          width: 75%;
         }
       }
   
       .serviceContent {
-        width: 95%;
-        height: 90vh;
-        margin: 0 auto;
-        background-color: var(--clr-purple);
-        border-radius: 0.5em;
-        display: flex;
-        flex-direction: column;
   
         .row1 {
-          width: 100%;
-          height: 50%;
-          display: flex;
-          padding: 3em;
+          flex-direction: column;
   
           .serviceProvide {
-            width: 70%;
-            height: 100%;
-            font-size: 2em;
-            color: var(--clr-white);
+            width: 100%;
+            height: 70%;
+            font-size: 1.2em;
   
             ol {
               padding: 1em;
@@ -1195,68 +1096,53 @@
           }
   
           .btnContainer {
-            width: 30%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            font-size: 2em;
-            color: var(--clr-white);
+            width: 100%;
+            height: 30%;
+            font-size: 1.2em;
   
             .btn {
-              width: 50%;
-              height: 20%;
-              background-color: var(--clr-white);
-              cursor: pointer;
-              color: var(--clr-purple);
-              border-radius: 0.3em;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 1em;
-              margin-top: 1em;
-              transition: .3s all ease;
-  
-              &:hover{
-                width: 100%;
-              }
+              width: 100%;
+              height: 40%;
             }
           }
         }
   
         .row2 {
-          width: 100%;
-          height: 50%;
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
+          flex-direction: column;
   
           .box{
-            width: 30%;
-            height: 80%;
+            width: 100%;
+            height: 30%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 1em;
   
             .boxImage {
-              width: 50%;
-              height: 30%;
+              width: 40%;
+              height: 100%;
               margin-bottom: 3em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
       
               img {
-                height: 100%;
+                width: 50px;
+                height: 50px;
               }
             }
       
             .boxName {
-              height: 15%;
-              font-size: 1.5em;
-              font-weight: bold;
-              color: var(--clr-white);
+            display: none;
             }
       
             .boxContent {
-              height: 30%;
-              font-size: 1.5em;
-              color: var(--clr-white);
+              width: 50%;
+              height: 100%;
+              font-size: .8em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
             }
           }
         }
