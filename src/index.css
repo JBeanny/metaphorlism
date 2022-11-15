@@ -21,6 +21,7 @@
   --clr-white: #fff;
   --clr-sub: #383838a1;
   --clr-subDark: #383838cd;
+  --clr-sub30: rgba(56, 56, 56, 0.3);
 
   background-color: var(--clr-background);
   font-family: "Jaldi", sans-serif;

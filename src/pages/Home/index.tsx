@@ -45,8 +45,8 @@ const index = () => {
                       <span>Education</span>
                     </div>
                     <ul className={classes.educationContent}>
-                      {val.education.map((edu) => {
-                        return <li>{edu}</li>;
+                      {val.education.map((edu,index) => {
+                        return <li key={index}>{edu}</li>;
                       })}
                     </ul>
                   </div>
@@ -57,8 +57,8 @@ const index = () => {
                       <span>Experience</span>
                     </div>
                     <ul className={classes.experienceContent}>
-                      {val.experience.map((exp) => {
-                        return <li>{exp}</li>;
+                      {val.experience.map((exp,index) => {
+                        return <li key={index}>{exp}</li>;
                       })}
                     </ul>
                   </div>
@@ -90,6 +90,7 @@ const index = () => {
         {services.map((val, index) => {
           return (
             <div
+              key={index}
               className={classes.box}
               style={index !== 2 ? { borderRight: "2px solid #ffffff6e" } : {}}
             >

@@ -1,8 +1,8 @@
 import Hero from "./images/HeroImg.avif";
-import Sotharoth from "./images/Sotharoth.jpg";
-import Tangmeng from "./images/Tangmeng.avif";
 import ChanEy from "./images/chaney.jpg";
 import Theary from "./images/theary.jpg";
+import Sotharoth from "./images/SotharothYim.png";
+import Tangmeng from "./images/TangmengLim.png";
 import EducationIcon from "./svg/EducationIcon";
 import ExperienceIcon from "./svg/ExperienceIcon";
 import CapabilityIcon from "./svg/CapabilityIcon";
@@ -17,6 +17,11 @@ import Lecture from "./images/Lecture.png";
 import UI from "./images/UI.png";
 import UIPicture from "./images/UIPicture.png";
 import ExternalIcon from "./svg/ExternalIcon";
+import FacebookLogo from "./images/Facebook.png";
+import LinkedInLogo from "./images/LinkedIn.png";
+import MailLogo from "./images/Mail.png";
+import WebsiteLogo from "./images/Website.png";
+import TelegramLogo from "./images/Telegram.png";
 
 export {
   HomeIcon,
@@ -38,4 +43,9 @@ export {
   ExperienceIcon,
   CapabilityIcon,
   ExternalIcon,
+  WebsiteLogo,
+  FacebookLogo,
+  LinkedInLogo,
+  MailLogo,
+  TelegramLogo,
 };

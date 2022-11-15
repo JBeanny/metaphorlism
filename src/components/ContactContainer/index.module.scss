@@ -1,0 +1,51 @@
+.container {
+  background-color: var(--clr-white);
+  padding: 2em 0.5em 0.5em 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 35ch;
+  border-radius: 10px;
+
+  .logo {
+    align-self: center;
+    height: 6em;
+    width: 6em;
+    overflow: hidden;
+  }
+
+  .platform {
+    color: var(--clr-subDark);
+  }
+
+  .line {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--clr-sub30);
+    margin-bottom: 1.5em;
+  }
+
+  .name {
+    font-weight: 400;
+    color: var(--clr-purple);
+  }
+
+  .link {
+    color: var(--clr-sub);
+  }
+
+  .btn {
+    margin-top: 0.5em;
+    padding: 0.6em;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid var(--clr-subDark);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-color: var(--clr-white);
+      background-color: var(--clr-sub30);
+    }
+  }
+}

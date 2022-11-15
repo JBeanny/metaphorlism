@@ -1,5 +1,5 @@
 .container {
-  position: relative;
+  position: absolute;
   width: 100%;
   bottom: 0;
   font-size: 1.1em;
@@ -11,7 +11,7 @@
   font-family: "Jaldi", sans-serif;
   gap: 1.5em;
   color: var(--clr-purple);
-  z-index: 99;
+  z-index: 1000;
 
   img {
     width: 5em;
@@ -26,5 +26,26 @@
 
   .copyright {
     margin-left: auto;
+  }
+}
+@media only screen and (max-width: 768px){
+  .container {
+    padding: .5em 1em;
+  
+    img {
+      width: 3em;
+      height: 3em;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  
+    .name {
+      display: none;
+    }
+  
+    .copyright {
+      margin-left: auto;
+      font-size: .7em;
+    }
   }
 }

@@ -1,0 +1,1 @@
+@mixin for-mobile-portrait {   @media screen and (max-device-width: 768px) {     @content;   } }

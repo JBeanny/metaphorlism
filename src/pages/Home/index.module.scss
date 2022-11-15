@@ -91,7 +91,7 @@
     rotate: -5deg;
     background-color: var(--clr-purple);
     position: absolute;
-    bottom: 10em;
+    top: 45em;
     display: flex;
     align-items: center;
     margin-top: 5em;
@@ -667,6 +667,7 @@
       width: 100vw;
       height: 150vh;
       flex-direction: column-reverse;
+      position: relative;
   
       .heroContent {
         width: 100%;
@@ -715,8 +716,9 @@
   
     .heroSection::after {
       content: "Metaphorlism will make your metaphors into reality !!!";
-      height: 8vh;
-      bottom: 10em;
+      height: 6vh;
+      // top: 43em;
+      top: 35%;
       width: 105vw;
       padding-left: 3em;
       animation: none;
@@ -1075,6 +1077,7 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 5em;
+      padding-top: 3em;
   
       .serviceTitle {
         font-size: 2em;

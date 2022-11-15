@@ -36,9 +36,9 @@ const index = () => {
                         <span>Technologies: </span>
                         <ul>
                         {
-                            data.technology.map((tech : string,index: Number) => {
+                            data.technology.map((tech : string,index: number) => {
                                 return (
-                                    <li className={classes.techName}>
+                                    <li className={classes.techName} key={index}>
                                         {index !== data.technology.length -1 ? `${tech}, ` : tech}
                                     </li>
                                 )
@@ -53,9 +53,9 @@ const index = () => {
                     <div className={classes.producer}>
                         <span>Produced By: </span>
                         {
-                            data.producer.map((producer: string, index: Number) => {
+                            data.producer.map((producer: string, index: number) => {
                                 return (
-                                    <span className={classes.producerName}>
+                                    <span className={classes.producerName} key={index}>
                                         {index !== data.producer.length -1 ? `${producer} & ` : producer}
                                     </span>
                                 )
