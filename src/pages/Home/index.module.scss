@@ -53,6 +53,15 @@
           font-size: 1.5em;
           border-radius: 0.5em;
           margin-top: 1em;
+          cursor: pointer;
+          border: 2px solid var(--clr-purple);
+          transition: .3s all ease;
+
+          &:hover{
+            background-color: transparent;
+            color: var(--clr-subDark);
+            border: 2px solid var(--clr-subDark);
+          }
         }
       }
 
