@@ -1,15 +1,21 @@
+@use "../../abstract/mixin" as *;
+
 .container {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   font-family: "Jaldi", sans-serif;
-  font-size: 1.1em;
+  font-size: 1.6rem;
   background-color: #eeeeee;
   align-items: center;
-  padding: 1em 1.5em;
+  padding: 0.4em 1.3em;
   gap: 1em;
   z-index: 1000;
+
+  .hamburger {
+    display: none;
+  }
 
   .logo {
     display: flex;
@@ -30,110 +36,120 @@
     }
   }
 
-  .link {
+  .linkContainer {
     display: flex;
-    align-items: center;
-    color: var(--clr-purple);
-    gap: 0.3em;
-    cursor: pointer;
-    padding: 0.3em 1.2em;
-    border-radius: 10px;
-    position: relative;
+    margin-left: auto;
+    gap: 1em;
+
+    .link {
+      display: flex;
+      align-items: center;
+      color: var(--clr-purple);
+      gap: 0.3em;
+      cursor: pointer;
+      padding: 0.3em 1.2em;
+      border-radius: 10px;
+      position: relative;
+
+      svg {
+        fill: var(--clr-purple);
+      }
+
+      &.home {
+        margin-left: auto;
+
+        svg {
+          stroke: var(--clr-purple);
+          fill: none;
+        }
+      }
+
+      &:hover:not(.active) {
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          border-radius: 10px;
+        }
+
+        &::before {
+          border-top-right-radius: 0;
+          border-top-left-radius: 0;
+          background-color: var(--clr-background);
+          bottom: 0.3em;
+          z-index: -1;
+        }
+
+        &::after {
+          left: 50%;
+          right: 50%;
+          background: var(--clr-purple);
+          z-index: -2;
+
+          animation: HoverLink 0.3s ease forwards;
+        }
+      }
+    }
+  }
+}
+
+.container .linkContainer {
+  .link.active {
+    color: #fff;
 
     svg {
+      fill: #fff;
+    }
+
+    &.home svg {
+      stroke: #fff;
       fill: var(--clr-purple);
     }
 
-    &.home {
-      margin-left: auto;
+    background-color: var(--clr-purple);
+  }
 
-      svg {
-        stroke: var(--clr-purple);
-        fill: none;
-      }
+  .link.clickAnimation {
+    color: #fff;
+
+    svg {
+      fill: #fff;
     }
 
-    &:hover:not(.active) {
-      &::after,
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-radius: 10px;
-      }
-
-      &::before {
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-        background-color: var(--clr-background);
-        bottom: 0.3em;
-        z-index: -1;
-      }
-
-      &::after {
-        left: 50%;
-        right: 50%;
-        background: var(--clr-purple);
-        z-index: -2;
-
-        animation: HoverLink 0.3s ease forwards;
-      }
+    &.home svg {
+      stroke: #fff;
+      fill: var(--clr-purple);
     }
-  }
-}
 
-div.link.active {
-  color: #fff;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 10px;
+    }
 
-  svg {
-    fill: #fff;
-  }
+    &::before {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      background-color: var(--clr-background);
+      bottom: 0.3em;
+      z-index: -1;
 
-  &.home svg {
-    stroke: #fff;
-  }
+      animation: ClickLink 0.1s ease forwards;
+    }
 
-  background-color: var(--clr-purple);
-}
-
-div.link.clickAnimation {
-  color: #fff;
-
-  svg {
-    fill: #fff;
-  }
-
-  &.home svg {
-    stroke: #fff;
-  }
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 10px;
-  }
-
-  &::before {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    background-color: var(--clr-background);
-    bottom: 0.3em;
-    z-index: -1;
-
-    animation: ClickLink 0.1s ease forwards;
-  }
-
-  &::after {
-    background: var(--clr-purple);
-    z-index: -2;
+    &::after {
+      background: var(--clr-purple);
+      z-index: -2;
+    }
   }
 }
 
@@ -147,5 +163,55 @@ div.link.clickAnimation {
 @keyframes ClickLink {
   to {
     bottom: 100%;
+  }
+}
+
+@include for-mobile {
+  .container {
+    padding: 0.1em 0.5em;
+
+    .logo {
+      img {
+        width: 2em;
+        height: 2em;
+      }
+
+      .name {
+        font-size: 1.2rem;
+      }
+    }
+
+    .hamburger {
+      display: flex;
+      margin-left: auto;
+      margin-right: 1em;
+      cursor: pointer;
+    }
+
+    .linkContainer {
+      position: absolute;
+      flex-direction: column;
+      left: 0;
+      right: 0;
+      top: 100%;
+      gap: 0.2em;
+      background-color: var(--clr-background);
+      overflow: hidden;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 2px 2px 0 #0009;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .link {
+        font-size: 0.7em;
+
+        &.home {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }

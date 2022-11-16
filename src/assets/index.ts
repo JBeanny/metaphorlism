@@ -22,6 +22,7 @@ import LinkedInLogo from "./images/LinkedIn.png";
 import MailLogo from "./images/Mail.png";
 import WebsiteLogo from "./images/Website.png";
 import TelegramLogo from "./images/Telegram.png";
+import HamburgerIcon from "./svg/HamburgerIcon";
 
 export {
   HomeIcon,
@@ -48,4 +49,5 @@ export {
   LinkedInLogo,
   MailLogo,
   TelegramLogo,
+  HamburgerIcon,
 };

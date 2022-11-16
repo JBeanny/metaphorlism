@@ -6,6 +6,7 @@ import {
   ProjectIcon,
   ServiceIcon,
   Logo,
+  HamburgerIcon,
 } from "../../assets";
 import classes from "./index.module.css";
 
@@ -16,6 +17,7 @@ function Navigation() {
   const { pathname } = useLocation();
   const [active, setActive] = useState(pathname.split("/")[1] || "home");
   const [transition, setTransition] = useState("");
+  const [isOpenMenu, setOpenMenu] = useState(false);
 
   const handleLink = (name: string) => {
     switch (name) {
@@ -63,41 +65,53 @@ function Navigation() {
         <h1 className={classes.name}>Metaphorlism</h1>
       </div>
       <div
-        className={`no-select ${classes.link} ${classes.home} ${
-          active === "home" ? classes.active : ""
-        } ${transition === "home" ? classes.clickAnimation : ""}`}
-        onClick={() => handleLink("home")}
+        className={`${classes.linkContainer} ${
+          isOpenMenu ? classes.active : ""
+        }`}
       >
-        <HomeIcon />
-        Home
+        <div
+          className={`no-select ${classes.link} ${classes.home} ${
+            active === "home" ? classes.active : ""
+          } ${transition === "home" ? classes.clickAnimation : ""}`}
+          onClick={() => handleLink("home")}
+        >
+          <HomeIcon />
+          Home
+        </div>
+        <div
+          className={`no-select ${classes.link} ${classes.service} ${
+            active === "service" ? classes.active : ""
+          } ${transition === "service" ? classes.clickAnimation : ""}`}
+          onClick={() => handleLink("service")}
+        >
+          <ServiceIcon />
+          Service
+        </div>
+        <div
+          className={`no-select ${classes.link} ${classes.project} ${
+            active === "project" ? classes.active : ""
+          } ${transition === "project" ? classes.clickAnimation : ""}`}
+          onClick={() => handleLink("project")}
+        >
+          <ProjectIcon />
+          Project
+        </div>
+        <div
+          className={`no-select ${classes.link} ${classes.contact} ${
+            active === "contact" ? classes.active : ""
+          } ${transition === "contact" ? classes.clickAnimation : ""}`}
+          onClick={() => handleLink("contact")}
+        >
+          <ContactIcon />
+          Contact
+        </div>
       </div>
-      <div
-        className={`no-select ${classes.link} ${classes.service} ${
-          active === "service" ? classes.active : ""
-        } ${transition === "service" ? classes.clickAnimation : ""}`}
-        onClick={() => handleLink("service")}
+      <span
+        className={classes.hamburger}
+        onClick={() => setOpenMenu((prev) => !prev)}
       >
-        <ServiceIcon />
-        Service
-      </div>
-      <div
-        className={`no-select ${classes.link} ${classes.project} ${
-          active === "project" ? classes.active : ""
-        } ${transition === "project" ? classes.clickAnimation : ""}`}
-        onClick={() => handleLink("project")}
-      >
-        <ProjectIcon />
-        Project
-      </div>
-      <div
-        className={`no-select ${classes.link} ${classes.contact} ${
-          active === "contact" ? classes.active : ""
-        } ${transition === "contact" ? classes.clickAnimation : ""}`}
-        onClick={() => handleLink("contact")}
-      >
-        <ContactIcon />
-        Contact
-      </div>
+        <HamburgerIcon />
+      </span>
     </div>
   );
 }
