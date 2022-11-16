@@ -1,7 +1,13 @@
 @use "../../abstract/mixin" as *;
 
-.container{
-    position: relative;
-    padding-top: 5.5em;
-    padding-bottom: 9em;
+.container {
+  position: relative;
+  padding-top: 5.5em;
+  padding-bottom: 9em;
+}
+
+@include for-mobile {
+  .container {
+    padding-bottom: 4.5em;
+  }
 }
