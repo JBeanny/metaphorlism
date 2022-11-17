@@ -2,8 +2,8 @@ function OptionIcon() {
   return (
     <svg
       width="43"
-      height="28"
-      viewBox="0 0 43 28"
+      height="30"
+      viewBox="0 0 42 45"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

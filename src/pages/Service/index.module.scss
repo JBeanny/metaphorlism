@@ -1,6 +1,8 @@
+@use "../../abstract/mixin" as *;
+
 .title {
   text-align: center;
-  font-size: 3.3em;
+  font-size: 4rem;
   color: var(--clr-purple);
   margin-bottom: 2em;
 }
@@ -9,4 +11,48 @@
   display: flex;
   justify-content: center;
   gap: 5em;
+}
+
+@include for-mobile {
+  .title {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .serviceContainer {
+    display: block;
+    height: 30em;
+    margin: 0 1em;
+    overflow: hidden;
+    position: relative;
+
+    .next {
+      position: absolute;
+      right: 1.5em;
+      top: 2.5em;
+      scale: 1.5;
+
+      svg {
+        fill: black;
+        rotate: -90deg;
+      }
+    }
+
+    span {
+      > * {
+        position: absolute;
+        top: 6em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+      }
+
+      &.active {
+        > * {
+          display: block;
+        }
+      }
+    }
+  }
 }

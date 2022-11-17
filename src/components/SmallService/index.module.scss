@@ -1,10 +1,18 @@
+@use "../../abstract/mixin" as *;
+
 .container {
   background-color: #fff;
+
   width: 40ch;
   height: 25em;
   position: relative;
   padding-top: 3em;
   border-radius: 10px;
+
+  @include for-mobile {
+    width: auto;
+    height: auto;
+  }
 
   a {
     position: absolute;
