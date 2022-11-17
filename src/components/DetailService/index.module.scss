@@ -1,20 +1,23 @@
+@use "../../abstract/mixin" as *;
+
 .service {
   padding: 0 2em;
   margin-bottom: 3em;
+  font-size: 0.625rem;
 
   .serviceName {
     position: relative;
     color: var(--clr-purple);
     font-weight: 400;
-    font-size: 3em;
+    font-size: 5em;
 
     &::after {
       content: "";
       position: absolute;
       left: 0;
-      right: 65%;
+      width: 10em;
       bottom: 0;
-      top: 90%;
+      height: 0.2em;
       border: 2px solid var(--clr-purple);
       border-radius: 10px;
       background-color: var(--clr-white);
@@ -29,9 +32,11 @@
 
     .imageSection {
       img {
+        --lenght: 50em;
+
         display: block;
-        width: 25em;
-        height: 25em;
+        width: var(--lenght);
+        height: var(--lenght);
         background-color: black;
         border-radius: 10px;
         overflow: hidden;
@@ -40,7 +45,7 @@
       .action {
         display: flex;
         padding: 0.5em 0;
-        font-size: 1.4em;
+        font-size: 3em;
 
         .optionSelector {
           position: relative;
@@ -84,9 +89,10 @@
             bottom: 0;
             margin: auto 0;
             fill: black;
-            scale: 0.6;
             rotate: 180deg;
             cursor: pointer;
+            display: grid;
+            place-items: center;
           }
         }
 
@@ -105,17 +111,17 @@
     }
 
     .package {
-      width: 25em;
+      width: 50em;
       background-color: #fff;
       border-radius: 15px;
-      padding: 0.5em;
+      padding: 2em;
       position: relative;
 
       .priceTag {
         position: absolute;
-        font-size: 1.5em;
+        font-size: 2.5em;
         right: 0.8em;
-        top: 0.5em;
+        top: 0.8em;
         line-height: 1.2em;
         background-color: var(--clr-purple);
         color: var(--clr-white);
@@ -126,15 +132,18 @@
       .name {
         color: var(--clr-purple);
         font-weight: 400;
+        font-size: 3.5em;
+        line-height: 1em;
       }
 
       .description,
-      li {
-        font-size: 1.1em;
+      li,
+      .list,
+      .duration {
+        font-size: 2em;
       }
 
       .list {
-        font-size: 1.3em;
         color: var(--clr-purple);
       }
 
@@ -147,7 +156,34 @@
         position: absolute;
         bottom: 0.3em;
         left: 0.7em;
-        font-size: 1.3em;
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .service {
+    .serviceName {
+      font-size: 3em;
+    }
+    .container {
+      flex-direction: column;
+      align-items: center;
+
+      .imageSection {
+        img {
+          --lenght: 35em;
+        }
+
+        .action {
+          gap: 1em;
+          font-size: 1.7em;
+        }
+      }
+
+      .package {
+        width: 35em;
+        flex-basis: 60em;
       }
     }
   }
