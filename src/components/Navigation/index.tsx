@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   ContactIcon,
@@ -19,11 +19,22 @@ function Navigation() {
   const [transition, setTransition] = useState("");
   const [isOpenMenu, setOpenMenu] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setOpenMenu(false);
+    };
+    window.onscroll = handleScroll;
+
+    return () => {
+      window.onscroll = null;
+    };
+  }, []);
+
   const handleLink = (name: string) => {
     if (active === name) return;
 
     setOpenMenu(false);
-    
+
     switch (name) {
       case "home":
         setTimeout(() => {
@@ -112,7 +123,7 @@ function Navigation() {
       </div>
       <span
         className={classes.hamburger}
-        onClick={() => setOpenMenu((prev) => !prev)}
+        onTouchStart={() => setOpenMenu((prev) => !prev)}
       >
         <HamburgerIcon />
       </span>
