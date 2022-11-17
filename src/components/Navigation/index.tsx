@@ -20,6 +20,10 @@ function Navigation() {
   const [isOpenMenu, setOpenMenu] = useState(false);
 
   const handleLink = (name: string) => {
+    if (active === name) return;
+
+    setOpenMenu(false);
+    
     switch (name) {
       case "home":
         setTimeout(() => {

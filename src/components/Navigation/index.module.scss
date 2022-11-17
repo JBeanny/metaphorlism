@@ -40,6 +40,7 @@
     display: flex;
     margin-left: auto;
     gap: 1em;
+    font-size: 0.7em;
 
     .link {
       display: flex;
@@ -169,6 +170,7 @@
 @include for-mobile {
   .container {
     padding: 0.1em 0.5em;
+    box-shadow: 0 0 10px 0 #0007;
 
     .logo {
       img {
@@ -191,22 +193,31 @@
     .linkContainer {
       position: absolute;
       flex-direction: column;
-      left: 0;
       right: 0;
       top: 100%;
       gap: 0.2em;
+      padding: 0 0.5em 0.5em 0.5em;
       background-color: var(--clr-background);
       overflow: hidden;
       border-radius: 0 0 10px 10px;
-      box-shadow: 0 2px 2px 0 #0009;
-      display: none;
+      // display: none;
+      box-shadow: -1px 3px 2px #0005;
+      scale: 1 0;
+      translate: 0 -50%;
+      transition: all .3s ease-in-out;
 
       &.active {
-        display: block;
+        // display: block;
+        translate: 0 0;
+        scale: 1 1;
       }
 
       .link {
         font-size: 0.7em;
+
+        svg {
+          scale: 0.8;
+        }
 
         &.home {
           margin-left: 0;
