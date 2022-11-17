@@ -11,26 +11,32 @@
   display: flex;
   justify-content: center;
   gap: 5em;
+
+  .next {
+    display: none;
+  }
 }
 
 @include for-mobile {
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 0;
   }
 
   .serviceContainer {
     display: block;
     height: 30em;
-    margin: 0 1em;
+    margin: 1em 1em;
     overflow: hidden;
     position: relative;
 
     .next {
+      display: block;
       position: absolute;
       right: 1.5em;
-      top: 2.5em;
+      top: 1em;
       scale: 1.5;
+      animation: Blinking 1.3s ease-in-out infinite;
 
       svg {
         fill: black;
@@ -54,5 +60,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes Blinking {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
