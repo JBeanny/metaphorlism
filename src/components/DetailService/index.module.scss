@@ -165,6 +165,10 @@
   .service {
     .serviceName {
       font-size: 3em;
+
+      &::after {
+        width: 100%;
+      }
     }
     .container {
       flex-direction: column;
@@ -172,7 +176,7 @@
 
       .imageSection {
         img {
-          --lenght: 35em;
+          --lenght: 30em;
         }
 
         .action {
@@ -182,7 +186,7 @@
       }
 
       .package {
-        width: 35em;
+        width: auto;
         flex-basis: 60em;
       }
     }
