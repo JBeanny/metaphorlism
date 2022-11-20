@@ -73,11 +73,17 @@ function Navigation() {
     }
   };
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={classes.container} id="navigation-bar">
       <div className={classes.logo}>
         <img src={Logo} alt="Metaphorlism's Logo" />
-        <h1 className={classes.name}>Metaphorlism</h1>
+        <h1 className={classes.name} onTouchStart={handleScrollToTop}>
+          Metaphorlism
+        </h1>
       </div>
       <div
         className={`${classes.linkContainer} ${
