@@ -1,37 +1,44 @@
+@use "../../abstract/mixin" as *;
+
 .container {
+  font-size: 0.625rem;
   background-color: var(--clr-white);
-  padding: 2em 0.5em 0.5em 0.5em;
+  padding: 0.96em;
   display: flex;
   flex-direction: column;
-  flex-basis: 35ch;
+  flex-basis: 80ch;
   border-radius: 10px;
+  padding-top: 3.9em;
 
   .logo {
     align-self: center;
-    height: 6em;
-    width: 6em;
+    height: 11em;
+    width: 11em;
     overflow: hidden;
   }
 
   .platform {
+    font-size: 2.24em;
     color: var(--clr-subDark);
   }
 
   .line {
     display: block;
-    height: 2px;
+    height: .2em;
     width: 100%;
     background-color: var(--clr-sub30);
-    margin-bottom: 1.5em;
+    margin-bottom: 2.9em;
   }
 
   .name {
     font-weight: 400;
     color: var(--clr-purple);
+    font-size: 2.24em;
   }
 
   .link {
     color: var(--clr-sub);
+    font-size: 1.9em;
   }
 
   .btn {
@@ -42,10 +49,22 @@
     border: 2px solid var(--clr-subDark);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    margin-top: auto;
+    font-size: 1.92em;
 
     &:hover {
       border-color: var(--clr-white);
       background-color: var(--clr-sub30);
     }
+  }
+}
+
+@include for-mobile {
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }

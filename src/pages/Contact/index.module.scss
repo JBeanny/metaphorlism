@@ -1,25 +1,36 @@
+@use "../../abstract/mixin" as *;
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 0.625rem;
 
   .title {
     text-align: center;
     width: 20ch;
+    font-size: 3.85em;
     color: var(--clr-purple);
   }
 
   .sub {
     color: var(--clr-subDark);
+    text-align: center;
+    font-size: 1.92em;
   }
 
   .contactContainer {
     align-self: flex-start;
     margin-left: 3em;
+    font-size: 1.92em;
     display: flex;
     gap: 3em;
     color: var(--clr-purple);
+
+    @include for-mobile {
+      align-self: center;
+      margin: 0;
+    }
 
     .team,
     .member {
@@ -34,7 +45,7 @@
         bottom: 0;
         background-color: var(--clr-purple);
         height: 2px;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
       }
 
       &:hover {
@@ -72,6 +83,7 @@
 
       .name {
         color: var(--clr-purple);
+        font-size: 2.24em;
       }
 
       .image {
@@ -113,7 +125,7 @@
     &.team {
       max-width: 1400px;
       width: 90%;
-      margin-bottom: 8em;
+      margin-bottom: 12em;
 
       &::before {
         content: "";
@@ -125,6 +137,52 @@
         z-index: -10;
         background-color: var(--clr-purple);
         border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .wrapper {
+    .title {
+      font-size: 3.2em;
+    }
+
+    .contactWrapper {
+      &.team,
+      &.member {
+        width: 60ch;
+        height: 45em;
+        overflow-y: scroll;
+        direction: ltr;
+        margin: 2em auto;
+        border-radius: 10px;
+        // box-shadow: 0 0 10px #0005;
+
+        div:first-child {
+          &::after {
+            content: "Scroll to right for more";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--clr-purple);
+            color: var(--clr-white);
+            border-radius: 10px;
+            padding: 0 0.5em;
+          }
+        }
+
+        div:nth-child(2) {
+          translate: 105% 0;
+        }
+
+        div:nth-child(3) {
+          translate: 210% 0;
+        }
+
+        &::before {
+          scale: 0;
+        }
       }
     }
   }
