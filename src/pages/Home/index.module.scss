@@ -56,9 +56,9 @@
           margin-top: 1em;
           cursor: pointer;
           border: 2px solid var(--clr-purple);
-          transition: .3s all ease;
+          transition: 0.3s all ease;
 
-          &:hover{
+          &:hover {
             background-color: transparent;
             color: var(--clr-subDark);
             border: 2px solid var(--clr-subDark);
@@ -77,6 +77,7 @@
     .heroImage {
       width: 40%;
       height: 100%;
+      // margin-bottom: 1em;
 
       .img {
         width: 85%;
@@ -610,9 +611,9 @@
             justify-content: center;
             font-size: 1em;
             margin-top: 1em;
-            transition: .3s all ease;
+            transition: 0.3s all ease;
 
-            &:hover{
+            &:hover {
               width: 100%;
             }
           }
@@ -626,7 +627,7 @@
         justify-content: space-evenly;
         align-items: center;
 
-        .box{
+        .box {
           width: 30%;
           height: 80%;
           display: flex;
@@ -636,19 +637,19 @@
             width: 50%;
             height: 30%;
             margin-bottom: 3em;
-    
+
             img {
               height: 100%;
             }
           }
-    
+
           .boxName {
             height: 15%;
             font-size: 1.5em;
             font-weight: bold;
             color: var(--clr-white);
           }
-    
+
           .boxContent {
             height: 30%;
             font-size: 1.5em;
@@ -656,12 +657,11 @@
           }
         }
       }
-      
     }
   }
 }
 
-@include for-mobile{
+@include for-mobile {
   .container {
     margin-top: 0;
     .heroSection {
@@ -670,7 +670,7 @@
       flex-direction: column-reverse;
       position: relative;
       margin-top: 0;
-  
+
       .heroContent {
         width: 100%;
         height: 50%;
@@ -679,7 +679,7 @@
         justify-content: center;
         align-items: center;
 
-        .welcome{
+        .welcome {
           font-size: 2em;
           display: flex;
           justify-content: center;
@@ -688,34 +688,34 @@
         .quote {
           font-size: 1em;
         }
-  
+
         .talkBtnContainer {
           width: 70%;
           height: 10vh;
           border-radius: 10px;
           margin-bottom: 1em;
-  
+
           .talkBtn {
             width: 100%;
           }
         }
-  
+
         .inspiration {
           font-size: 2em;
         }
       }
-  
+
       .heroImage {
         width: 100%;
         height: 40%;
-  
+
         .img {
           width: 100%;
           border-radius: 0em;
         }
       }
     }
-  
+
     .heroSection::after {
       content: "Metaphorlism will make your metaphors into reality !!!";
       height: 6vh;
@@ -727,22 +727,20 @@
       font-size: 0.8em;
     }
     //done
-  
+
     .teamSection {
-  
       .teamTitle {
         width: 100%;
         height: 10vh;
         font-size: 2em;
-        padding-left: .5em;
-  
+        padding-left: 0.5em;
+
         .titleStyle {
           width: 75%;
         }
       }
-  
+
       .team {
-  
         .memberPriCol {
           padding-top: 0;
           margin-bottom: 0;
@@ -753,38 +751,38 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-  
+
             .profileImg {
               width: 100%;
               height: 70%;
-  
+
               .img {
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
               }
             }
-  
+
             .profileText {
               width: 100%;
               height: 30%;
               line-height: 2em;
               display: flex;
               text-align: center;
-  
+
               .name {
                 font-size: 1.5em;
               }
-  
+
               .age {
                 font-size: 1em;
               }
             }
           }
-  
+
           .memberContent {
             flex-direction: column;
-  
+
             .col1 {
               width: 100%;
               height: 50%;
@@ -793,28 +791,26 @@
               margin-top: 0em;
               padding-left: 0;
               padding: 2em;
-  
+
               .education {
-  
                 .educationTitle {
                   width: 100%;
                   font-size: 1.5em;
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                
 
-                  svg{
+                  svg {
                     margin-right: 1em;
                   }
                 }
-  
+
                 .educationContent {
                   width: 100%;
                   font-size: 1em;
-  
+
                   margin: 0 auto;
-  
+
                   .talkBtn {
                     width: 10em;
                     padding: 0.8em;
@@ -829,7 +825,7 @@
                     cursor: pointer;
                     border: 2px solid var(--clr-purple);
                     transition: 0.3s all ease;
-  
+
                     &:hover {
                       background-color: transparent;
                       border: 2px solid #383838;
@@ -838,9 +834,8 @@
                   }
                 }
               }
-  
+
               .experience {
-  
                 .experienceTitle {
                   width: 100%;
                   font-size: 1.5em;
@@ -849,48 +844,48 @@
                   justify-content: center;
                   margin-top: 1em;
 
-                  svg{
+                  svg {
                     margin-right: 1em;
                   }
                 }
-  
+
                 .experienceContent {
                   width: 100%;
                   height: 80%;
                   font-size: 1em;
                   margin-top: 1em;
 
-                  li{
+                  li {
                     width: 100%;
                     line-height: 1.2em;
                   }
                 }
               }
             }
-  
+
             .col2 {
               width: 100%;
               height: 50%;
               padding-left: 0em;
               margin-top: 0em;
-  
+
               .capability {
                 justify-content: center;
                 align-items: center;
-  
+
                 .capabilityTitle {
                   width: 100%;
                   font-size: 1.5em;
                   display: flex;
                   justify-content: center;
                   align-items: center;
-  
+
                   svg {
                     margin-right: 1em;
                     stroke: var(--clr-white);
                   }
                 }
-  
+
                 .capabilityContent {
                   height: 70%;
                   font-size: 1em;
@@ -915,38 +910,38 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-  
+
             .profileImg {
               width: 100%;
               height: 70%;
-  
+
               .img {
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
               }
             }
-  
+
             .profileText {
               width: 100%;
               height: 30%;
               line-height: 2em;
               display: flex;
               text-align: center;
-  
+
               .name {
                 font-size: 1.5em;
               }
-  
+
               .age {
                 font-size: 1em;
               }
             }
           }
-  
+
           .memberContent {
             flex-direction: column;
-  
+
             .col1 {
               width: 100%;
               height: 50%;
@@ -955,32 +950,31 @@
               margin-top: 0em;
               padding-left: 0;
               padding: 2em;
-  
+
               .education {
                 margin-top: 0;
-  
+
                 .educationTitle {
                   width: 100%;
                   font-size: 1.5em;
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                
 
-                  svg{
+                  svg {
                     margin-right: 1em;
                   }
                 }
-  
+
                 .educationContent {
                   width: 100%;
                   font-size: 1em;
                   margin: 0 auto;
 
-                  li{
+                  li {
                     margin-top: 1em;
                   }
-  
+
                   .talkBtn {
                     width: 10em;
                     padding: 0.8em;
@@ -995,7 +989,7 @@
                     cursor: pointer;
                     border: 2px solid var(--clr-purple);
                     transition: 0.3s all ease;
-  
+
                     &:hover {
                       background-color: transparent;
                       border: 2px solid #383838;
@@ -1004,7 +998,7 @@
                   }
                 }
               }
-  
+
               .experience {
                 margin-top: 0.5em;
 
@@ -1016,47 +1010,46 @@
                   justify-content: center;
                   margin-top: 1em;
 
-                  svg{
+                  svg {
                     margin-right: 1em;
                   }
                 }
-  
+
                 .experienceContent {
                   width: 100%;
                   height: 80%;
                   font-size: 1em;
                   margin-top: 1em;
 
-                  li{
+                  li {
                     line-height: 1.5em;
                   }
-
                 }
               }
             }
-  
+
             .col2 {
               width: 100%;
               height: 50%;
               padding-left: 0em;
               margin-top: 0em;
-  
+
               .capability {
                 justify-content: center;
                 align-items: center;
-  
+
                 .capabilityTitle {
                   width: 100%;
                   font-size: 1.5em;
                   display: flex;
                   justify-content: center;
                   align-items: center;
-  
+
                   svg {
                     margin-right: 1em;
                   }
                 }
-  
+
                 .capabilityContent {
                   height: 70%;
                   font-size: 1em;
@@ -1069,10 +1062,9 @@
             }
           }
         }
-  
       }
     }
-  
+
     .serviceSection {
       width: 100%;
       height: 100vh;
@@ -1080,58 +1072,57 @@
       flex-direction: column;
       margin-bottom: 5em;
       padding-top: 3em;
-  
+
       .serviceTitle {
         font-size: 2em;
-  
+
         .titleStyle {
           width: 75%;
         }
       }
-  
+
       .serviceContent {
-  
         .row1 {
           flex-direction: column;
-  
+
           .serviceProvide {
             width: 100%;
             height: 70%;
             font-size: 1.2em;
-  
+
             ol {
               padding: 1em;
-  
+
               li {
                 line-height: 1.5em;
                 opacity: 0.8;
               }
             }
           }
-  
+
           .btnContainer {
             width: 100%;
             height: 30%;
             font-size: 1.2em;
-  
+
             .btn {
               width: 100%;
               height: 40%;
             }
           }
         }
-  
+
         .row2 {
           flex-direction: column;
-  
-          .box{
+
+          .box {
             width: 100%;
             height: 30%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             padding: 1em;
-  
+
             .boxImage {
               width: 40%;
               height: 100%;
@@ -1139,28 +1130,1282 @@
               display: flex;
               justify-content: center;
               align-items: center;
-      
+
               img {
                 width: 50px;
                 height: 50px;
               }
             }
-      
+
             .boxName {
-            display: none;
+              display: none;
             }
-      
+
             .boxContent {
               width: 50%;
               height: 100%;
-              font-size: .8em;
+              font-size: 0.8em;
               display: flex;
               justify-content: center;
               align-items: center;
             }
           }
         }
-        
+      }
+    }
+  }
+}
+
+@include for-ipad-pro-portrait {
+  .container {
+    margin-top: 0;
+    .heroSection {
+      width: 100vw;
+      height: 200vh;
+      flex-direction: column-reverse;
+      position: relative;
+      margin-top: 0;
+
+      .heroContent {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .welcome {
+          font-size: 5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .quote {
+          font-size: 2em;
+        }
+
+        .talkBtnContainer {
+          width: 40%;
+          height: 8vh;
+          border-radius: 10px;
+          margin-bottom: 1em;
+          font-size: 1.5em;
+
+          .talkBtn {
+            width: 100%;
+          }
+        }
+
+        .inspiration {
+          font-size: 2.5em;
+        }
+      }
+
+      .heroImage {
+        width: 100%;
+        height: 50%;
+
+        .img {
+          width: 100%;
+          border-radius: 0em;
+        }
+      }
+    }
+
+    .heroSection::after {
+      content: "Metaphorlism will make your metaphors into reality !!!";
+      height: 6vh;
+      // top: 43em;
+      top: 35%;
+      width: 105vw;
+      padding-left: 3em;
+      animation: none;
+      font-size: 1.5em;
+    }
+    //done
+
+    .teamSection {
+      .teamTitle {
+        width: 100%;
+        height: 10vh;
+        font-size: 3em;
+        padding-left: 0.5em;
+
+        .titleStyle {
+          width: 50%;
+        }
+      }
+
+      .team {
+        .memberPriCol {
+          padding-top: 0;
+          margin-bottom: 0;
+
+          .profile {
+            width: 100%;
+            height: 20%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .profileImg {
+              width: 100%;
+              height: 70%;
+
+              .img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+              }
+            }
+
+            .profileText {
+              width: 100%;
+              height: 30%;
+              line-height: 2em;
+              display: flex;
+              text-align: center;
+
+              .name {
+                font-size: 2em;
+              }
+
+              .age {
+                font-size: 1.5em;
+              }
+            }
+          }
+
+          .memberContent {
+            flex-direction: column;
+
+            .col1 {
+              width: 100%;
+              height: 50%;
+              display: flex;
+              flex-direction: column;
+              margin-top: 0em;
+              padding-left: 0;
+              padding: 2em;
+
+              .education {
+                .educationTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .educationContent {
+                  width: 100%;
+                  font-size: 1.5em;
+
+                  margin: 0 auto;
+                }
+              }
+
+              .experience {
+                .experienceTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-top: 1em;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .experienceContent {
+                  width: 100%;
+                  height: 80%;
+                  font-size: 1.5em;
+                  margin-top: 1em;
+
+                  li {
+                    width: 100%;
+                    line-height: 1.2em;
+                  }
+                }
+              }
+            }
+
+            .col2 {
+              width: 100%;
+              height: 50%;
+              padding-left: 0em;
+              margin-top: 0em;
+
+              .capability {
+                justify-content: center;
+                align-items: center;
+
+                .capabilityTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                    stroke: var(--clr-white);
+                  }
+                }
+
+                .capabilityContent {
+                  height: 70%;
+                  font-size: 1.5em;
+                  border-radius: 10px;
+                  margin-top: 0em;
+                  padding: 1em;
+                  line-height: 1.2em;
+                }
+              }
+            }
+          }
+        }
+
+        .memberWhiCol {
+          padding-top: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          .profile {
+            width: 100%;
+            height: 20%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .profileImg {
+              width: 100%;
+              height: 70%;
+
+              .img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+              }
+            }
+
+            .profileText {
+              width: 100%;
+              height: 30%;
+              line-height: 2em;
+              display: flex;
+              text-align: center;
+
+              .name {
+                font-size: 2em;
+              }
+
+              .age {
+                font-size: 1.5em;
+              }
+            }
+          }
+
+          .memberContent {
+            flex-direction: column;
+
+            .col1 {
+              width: 100%;
+              height: 50%;
+              display: flex;
+              flex-direction: column;
+              margin-top: 0em;
+              padding-left: 0;
+              padding: 2em;
+
+              .education {
+                margin-top: 0;
+
+                .educationTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .educationContent {
+                  width: 100%;
+                  font-size: 1.5em;
+                  margin: 0 auto;
+
+                  li {
+                    margin-top: 1em;
+                  }
+                }
+              }
+
+              .experience {
+                margin-top: 0.5em;
+
+                .experienceTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-top: 1em;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .experienceContent {
+                  width: 100%;
+                  height: 80%;
+                  font-size: 1.5em;
+                  margin-top: 1em;
+
+                  li {
+                    line-height: 1.5em;
+                  }
+                }
+              }
+            }
+
+            .col2 {
+              width: 100%;
+              height: 50%;
+              padding-left: 0em;
+              margin-top: 0em;
+
+              .capability {
+                justify-content: center;
+                align-items: center;
+
+                .capabilityTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .capabilityContent {
+                  height: 70%;
+                  font-size: 1.5em;
+                  border-radius: 10px;
+                  margin-top: 0em;
+                  padding: 1em;
+                  line-height: 1.2em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .serviceSection {
+      width: 100%;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5em;
+      padding-top: 3em;
+
+      .serviceTitle {
+        font-size: 3em;
+
+        .titleStyle {
+          width: 50%;
+        }
+      }
+
+      .serviceContent {
+        .row1 {
+          // flex-direction: column;
+
+          .serviceProvide {
+            width: 100%;
+            height: 70%;
+            font-size: 2em;
+
+            ol {
+              padding: 1em;
+
+              li {
+                line-height: 1.5em;
+                opacity: 0.8;
+              }
+            }
+          }
+
+          .btnContainer {
+            width: 100%;
+            height: 30%;
+            font-size: 2em;
+
+            .btn {
+              width: 70%;
+              height: 40%;
+            }
+          }
+        }
+
+        .row2 {
+          .box {
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1em;
+
+            .boxImage {
+              width: 100%;
+              height: 100%;
+              margin-bottom: 3em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              img {
+                width: 100px;
+                height: 100px;
+              }
+            }
+
+            .boxName {
+              height: 15%;
+              font-size: 1.5em;
+              font-weight: bold;
+              color: var(--clr-white);
+            }
+
+            .boxContent {
+              width: 100%;
+              height: 100%;
+              font-size: 1.5em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-pro-landscape {
+  .container {
+    .heroSection {
+      .heroImage {
+        width: 45%;
+        height: 100%;
+
+        .img {
+          width: 90%;
+          height: 80%;
+          border-radius: 1em;
+        }
+      }
+    }
+
+    .heroSection::after {
+      content: "";
+      width: 0;
+      height: 5vh;
+      rotate: -5deg;
+      background-color: var(--clr-purple);
+      position: absolute;
+      top: 45em;
+      display: flex;
+      align-items: center;
+      margin-top: 5em;
+      padding-left: 10em;
+      color: var(--clr-white);
+      animation: banner 3s linear forwards;
+    }
+
+    .teamSection {
+      .teamTitle {
+        .titleStyle {
+          width: 40%;
+        }
+      }
+
+      .team {
+        .memberPriCol {
+          .profile {
+            .profileImg {
+              .img {
+                width: 150px;
+                height: 150px;
+              }
+            }
+          }
+        }
+
+        .memberWhiCol {
+          .profile {
+            .profileImg {
+              .img {
+                width: 150px;
+                height: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .serviceSection {
+      .serviceContent {
+        .row1 {
+          .btnContainer {
+            .btn {
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-portrait {
+  .container {
+    margin-top: 0;
+    .heroSection {
+      width: 100vw;
+      height: 200vh;
+      flex-direction: column-reverse;
+      position: relative;
+      margin-top: 0;
+
+      .heroContent {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .welcome {
+          font-size: 3em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .quote {
+          font-size: 1.5em;
+        }
+
+        .talkBtnContainer {
+          width: 50%;
+          height: 8vh;
+          border-radius: 10px;
+          margin-bottom: 1em;
+          font-size: 1.5em;
+
+          .talkBtn {
+            width: 100%;
+          }
+        }
+
+        .inspiration {
+          font-size: 2em;
+        }
+      }
+
+      .heroImage {
+        width: 100%;
+        height: 50%;
+
+        .img {
+          height: 100%;
+          width: 100%;
+          border-radius: 0em;
+        }
+      }
+    }
+
+    .heroSection::after {
+      content: "Metaphorlism will make your metaphors into reality !!!";
+      height: 6vh;
+      top: 35%;
+      width: 105vw;
+      padding-left: 3em;
+      animation: none;
+      font-size: 1.3em;
+    }
+    //done
+
+    .teamSection {
+      .teamTitle {
+        width: 100%;
+        height: 10vh;
+        font-size: 3em;
+        padding-left: 0.5em;
+
+        .titleStyle {
+          width: 50%;
+        }
+      }
+
+      .team {
+        .memberPriCol {
+          padding-top: 2em;
+          margin-bottom: 0;
+
+          .profile {
+            width: 100%;
+            height: 20%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .profileImg {
+              width: 100%;
+              height: 70%;
+
+              .img {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+              }
+            }
+
+            .profileText {
+              width: 100%;
+              height: 30%;
+              line-height: 2em;
+              display: flex;
+              text-align: center;
+
+              .name {
+                font-size: 2em;
+              }
+
+              .age {
+                font-size: 1.5em;
+              }
+            }
+          }
+
+          .memberContent {
+            flex-direction: column;
+
+            .col1 {
+              width: 100%;
+              height: 50%;
+              display: flex;
+              flex-direction: column;
+              margin-top: 0em;
+              padding-left: 0;
+              padding: 2em;
+
+              .education {
+                .educationTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .educationContent {
+                  width: 100%;
+                  font-size: 1.3em;
+
+                  margin: 0 auto;
+                }
+              }
+
+              .experience {
+                .experienceTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-top: 1em;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .experienceContent {
+                  width: 100%;
+                  height: 80%;
+                  font-size: 1.3em;
+                  margin-top: 1em;
+
+                  li {
+                    width: 100%;
+                    line-height: 1.2em;
+                  }
+                }
+              }
+            }
+
+            .col2 {
+              width: 100%;
+              height: 50%;
+              padding-left: 0em;
+              margin-top: 0em;
+
+              .capability {
+                justify-content: center;
+                align-items: center;
+
+                .capabilityTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                    stroke: var(--clr-white);
+                  }
+                }
+
+                .capabilityContent {
+                  height: 70%;
+                  font-size: 1.3em;
+                  border-radius: 10px;
+                  margin-top: 0em;
+                  padding: 1em;
+                  line-height: 1.2em;
+                }
+              }
+            }
+          }
+        }
+
+        .memberWhiCol {
+          padding-top: 2em;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          .profile {
+            width: 100%;
+            height: 20%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .profileImg {
+              width: 100%;
+              height: 70%;
+
+              .img {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+              }
+            }
+
+            .profileText {
+              width: 100%;
+              height: 30%;
+              line-height: 2em;
+              display: flex;
+              text-align: center;
+
+              .name {
+                font-size: 2em;
+              }
+
+              .age {
+                font-size: 1.5em;
+              }
+            }
+          }
+
+          .memberContent {
+            flex-direction: column;
+
+            .col1 {
+              width: 100%;
+              height: 50%;
+              display: flex;
+              flex-direction: column;
+              margin-top: 0em;
+              padding-left: 0;
+              padding: 2em;
+
+              .education {
+                margin-top: 0;
+
+                .educationTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .educationContent {
+                  width: 100%;
+                  font-size: 1.3em;
+                  margin: 0 auto;
+
+                  li {
+                    margin-top: 1em;
+                  }
+                }
+              }
+
+              .experience {
+                margin-top: 0.5em;
+
+                .experienceTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-top: 1em;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .experienceContent {
+                  width: 100%;
+                  height: 80%;
+                  font-size: 1.3em;
+                  margin-top: 1em;
+
+                  li {
+                    line-height: 1.5em;
+                  }
+                }
+              }
+            }
+
+            .col2 {
+              width: 100%;
+              height: 50%;
+              padding-left: 0em;
+              margin-top: 0em;
+
+              .capability {
+                justify-content: center;
+                align-items: center;
+
+                .capabilityTitle {
+                  width: 100%;
+                  font-size: 2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  svg {
+                    margin-right: 1em;
+                  }
+                }
+
+                .capabilityContent {
+                  height: 70%;
+                  font-size: 1.3em;
+                  border-radius: 10px;
+                  margin-top: 0em;
+                  padding: 1em;
+                  line-height: 1.2em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .serviceSection {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5em;
+      padding-top: 3em;
+
+      .serviceTitle {
+        font-size: 3em;
+
+        .titleStyle {
+          width: 50%;
+        }
+      }
+
+      .serviceContent {
+        .row1 {
+          .serviceProvide {
+            width: 100%;
+            height: 70%;
+            font-size: 1.5em;
+
+            ol {
+              padding: 1em;
+
+              li {
+                line-height: 1.5em;
+                opacity: 0.8;
+              }
+            }
+          }
+
+          .btnContainer {
+            width: 100%;
+            height: 30%;
+            font-size: 1.5em;
+
+            .btn {
+              width: 50%;
+              height: 40%;
+            }
+          }
+        }
+
+        .row2 {
+          .box {
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1em;
+
+            .boxImage {
+              width: 30%;
+              height: 100%;
+              margin-bottom: 3em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              img {
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+            .boxName {
+              display: none;
+            }
+
+            .boxContent {
+              width: 70%;
+              height: 100%;
+              font-size: 1.3em;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-landscape {
+  .container {
+    width: 100vw;
+    height: 100%;
+    background-color: var(--clr-background);
+    display: flex;
+    flex-direction: column;
+
+    .heroSection {
+      .heroContent {
+        .welcome {
+          font-size: 2em;
+        }
+
+        .quote {
+          font-size: 1em;
+        }
+
+        .talkBtnContainer {
+          .talkBtn {
+            width: 20vw;
+            padding: 0.5em;
+            font-size: 1em;
+          }
+        }
+
+        .inspiration {
+          width: 100%;
+          color: var(--clr-subDark);
+          font-size: 2em;
+          line-height: 1.5em;
+        }
+      }
+
+      .heroImage {
+        width: 40%;
+        height: 100%;
+
+        .img {
+          width: 100%;
+          // height: 100%;
+          border-radius: 1em;
+        }
+      }
+    }
+
+    .heroSection::after {
+      top: 10%;
+    }
+
+    .teamSection {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .teamTitle {
+        font-size: 2em;
+
+        .titleStyle {
+          width: 30%;
+        }
+      }
+
+      .team {
+        .memberPriCol {
+          .profile {
+            .profileImg {
+              .img {
+                width: 100px;
+                height: 100px;
+              }
+            }
+
+            .profileText {
+              line-height: 2em;
+
+              .name {
+                font-size: 1.5em;
+              }
+
+              .age {
+                font-size: 1em;
+              }
+            }
+          }
+
+          .memberContent {
+            .col1 {
+              width: 50%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              padding-left: 2em;
+              margin-top: 5em;
+
+              .education {
+                width: 100%;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+
+                .educationTitle {
+                  width: 30%;
+                  font-size: 1.5em;
+                }
+
+                .educationContent {
+                  font-size: 1em;
+                }
+              }
+
+              .experience {
+                .experienceTitle {
+                  width: 30%;
+                  font-size: 1.5em;
+                }
+
+                .experienceContent {
+                  font-size: 1em;
+
+                  li {
+                    height: 5vh;
+                    line-height: 2em;
+                  }
+                }
+              }
+            }
+
+            .col2 {
+              .capability {
+                .capabilityTitle {
+                  width: 100%;
+                }
+
+                .capabilityContent {
+                  font-size: 1em;
+                }
+              }
+            }
+          }
+        }
+
+        .memberWhiCol {
+          .profile {
+            .profileImg {
+              .img {
+                width: 100px;
+                height: 100px;
+              }
+            }
+
+            .profileText {
+              line-height: 2em;
+
+              .name {
+                font-size: 1.5em;
+              }
+
+              .age {
+                font-size: 1em;
+              }
+            }
+          }
+
+          .memberContent {
+            .col1 {
+              .education {
+                .educationTitle {
+                  width: 30%;
+                  font-size: 1.5em;
+                }
+
+                .educationContent {
+                  font-size: 1em;
+
+                  li {
+                    height: 5vh;
+                    line-height: 2em;
+                  }
+                }
+              }
+
+              .experience {
+                .experienceTitle {
+                  width: 30%;
+                  font-size: 1.5em;
+                }
+
+                .experienceContent {
+                  font-size: 1em;
+
+                  li {
+                    height: 5vh;
+                    line-height: 2em;
+                  }
+                }
+              }
+            }
+
+            .col2 {
+              .capability {
+                .capabilityTitle {
+                  width: 100%;
+                  font-size: 1.5em;
+
+                  svg {
+                    margin-right: 1em;
+                    stroke: var(--clr-purple);
+                  }
+                }
+
+                .capabilityContent {
+                  font-size: 1em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .serviceSection {
+      .serviceTitle {
+        font-size: 2em;
+
+        .titleStyle {
+          width: 30%;
+        }
+      }
+
+      .serviceContent {
+        .row1 {
+          .serviceProvide {
+            font-size: 1.5em;
+
+            ol {
+              padding: 1em;
+
+              li {
+                line-height: 1.5em;
+                opacity: 0.8;
+              }
+            }
+          }
+
+          .btnContainer {
+            width: 50%;
+            font-size: 1.5em;
+
+            .btn {
+              width: 70%;
+            }
+          }
+        }
+
+        .row2 {
+          .box {
+            .boxImage {
+              img {
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+            .boxName {
+              font-size: 1em;
+            }
+
+            .boxContent {
+              font-size: 1em;
+            }
+          }
+        }
       }
     }
   }

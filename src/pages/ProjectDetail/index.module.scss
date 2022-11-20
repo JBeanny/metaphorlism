@@ -1,160 +1,558 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.container{
-    width: 100vw;
-    height: 100%;
-    background-color: var(--clr-background);
+@use "../../abstract/mixin" as *;
+
+.container {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--clr-background);
+  display: flex;
+  flex-direction: row;
+
+  .back {
+    font-size: 4em;
+    color: var(--clr-purple);
+    position: absolute;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    left: 10px;
+
+    &:hover {
+      color: var(--clr-subDark);
+      scale: 1.1;
+    }
+  }
+
+  .projectImage {
+    width: 50%;
+    height: 80vh;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-white);
+    border-radius: 1em;
+    margin: 5em;
+    overflow: hidden;
+    position: relative;
 
-    .back{
-        font-size: 4em;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 140%;
+      background: linear-gradient(var(--clr-purple), #c657a5);
+      animation: border 4s linear infinite;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      background-color: var(--clr-white);
+      border-radius: 10px;
+    }
+
+    @keyframes border {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .image {
+      height: 80%;
+      z-index: 99;
+    }
+  }
+
+  .projectContent {
+    width: 50%;
+    height: 80vh;
+    margin: 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .project {
+      width: 100%;
+      height: 8vh;
+      border-radius: 1em;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      font-weight: bold;
+
+      .projectType {
+        font-size: 1.5em;
+        color: var(--clr-sub);
+        padding-right: 0.5em;
+      }
+
+      .projectName {
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        background-color: var(--clr-purple);
+        color: var(--clr-white);
+        border-radius: 10px;
+        margin-bottom: 1em;
+      }
+    }
+
+    .projectBanner {
+      width: 100%;
+      height: 60vh;
+      margin: 0 auto;
+      background-color: var(--clr-white);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      border: 2px solid var(--clr-purple);
+
+      span {
         color: var(--clr-purple);
-        position: absolute;
-        cursor: pointer;
-        transition: .3s all ease;
-        left: 10px;
+        margin-right: 1em;
+        font-weight: bold;
+      }
 
-        &:hover{
+      .technology {
+        width: 90%;
+        font-size: 1.5em;
+        padding-left: 1em;
+
+        .techName {
+          padding-left: 1em;
+          font-weight: normal;
+          color: var(--clr-subDark);
+        }
+      }
+
+      .producer {
+        width: 90%;
+        font-size: 1.5em;
+
+        .producerName {
+          font-weight: normal;
+          color: var(--clr-subDark);
+        }
+      }
+
+      .description {
+        width: 90%;
+        font-size: 1.5em;
+        font-weight: normal;
+        color: var(--clr-subDark);
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .back {
+      font-size: 3em;
+      margin-top: 0.5em;
+      top: 50px;
+    }
+
+    .projectImage {
+      width: 90%;
+      height: 30vh;
+
+      &:before {
+        width: 400px;
+        height: 60%;
+      }
+
+      &:after {
+        inset: 3px;
+      }
+
+      .image {
+        height: 100%;
+        z-index: 99;
+      }
+    }
+
+    .projectContent {
+      width: 90%;
+      height: 50vh;
+
+      .project {
+        width: 70%;
+        height: 8vh;
+        font-weight: normal;
+
+        .projectType {
+          font-size: 1.5em;
+        }
+
+        .projectName {
+          font-size: 2em;
+        }
+      }
+
+      .projectBanner {
+        .technology {
+          font-size: 1em;
+
+          .techName {
+            padding-left: 1em;
+            font-weight: normal;
             color: var(--clr-subDark);
-            scale: 1.1;
+          }
         }
+
+        .producer {
+          width: 90%;
+          font-size: 1em;
+
+          .producerName {
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .description {
+          width: 90%;
+          font-size: 1em;
+          font-weight: normal;
+          color: var(--clr-subDark);
+        }
+      }
     }
-    
-    .projectImage{
-        width: 50%;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--clr-white);
-        border-radius: 1em;
-        margin: 5em;
-        overflow: hidden;
-        position: relative;
+  }
+}
 
-        &:before{
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 140%;
-            background: linear-gradient(var(--clr-purple),#c657a5);
-            animation: border 4s linear infinite;
-        }
+@include for-ipad-pro-portrait {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        &:after{
-            content: '';
-            position: absolute;
-            inset: 4px;
-            background-color: var(--clr-white);
-            border-radius: 10px;
-        }
-
-        @keyframes border{
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-        }
-
-        .image{
-            height: 80%;
-            z-index: 99;
-        }
+    .back {
+      font-size: 3em;
+      margin-top: 0.5em;
+      top: 100px;
     }
 
-    .projectContent{
-        width: 50%;
-        height: 80vh;
-        margin: 7em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+    .projectImage {
+      width: 70%;
+      height: 30vh;
 
-        .project{
-            width: 100%;
-            height: 8vh;
-            border-radius: 1em;
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            justify-content: space-between;
-            margin: 0 auto;
-            font-weight: bold;
+      &:before {
+        width: 120%;
+        height: 50%;
+      }
 
-            .projectType{
-                font-size: 1.5em;
-                color: var(--clr-sub);
-                padding-right: .5em;
-            }
-    
-            .projectName{
-                width: 100%;
-                text-align: center;
-                font-size: 2.5em;
-                background-color: var(--clr-purple);
-                color: var(--clr-white);
-                border-radius: 10px;
-                margin-bottom: 1em;
-            }
-        }
+      &:after {
+        inset: 4px;
+      }
 
-        .projectBanner{
-            width: 100%;
-            height: 60vh;
-            margin: 0 auto;
-            background-color: var(--clr-white);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            border: 2px solid var(--clr-purple);
-
-            span{
-                color: var(--clr-purple);
-                margin-right: 1em; 
-                font-weight: bold;
-            }
-
-            .technology{
-                width: 90%;
-                font-size: 1.5em;
-                padding-left: 1em;
-
-                .techName{
-                    padding-left: 1em;
-                    font-weight: normal;
-                    color: var(--clr-subDark);
-                }
-                    
-            }
-    
-            
-            .producer{
-                width: 90%;
-                font-size: 1.5em;
-    
-                .producerName{
-                    font-weight: normal;
-                    color: var(--clr-subDark);
-                }
-            }
-
-            .description{
-                width: 90%;
-                font-size: 1.5em;
-                font-weight: normal;
-                color: var(--clr-subDark);
-            }
-        }
-
+      .image {
+        height: 100%;
+        z-index: 99;
+      }
     }
 
+    .projectContent {
+      width: 90%;
+      height: 50vh;
+
+      .project {
+        width: 70%;
+        height: 8vh;
+        font-weight: normal;
+
+        .projectType {
+          font-size: 2em;
+        }
+
+        .projectName {
+          font-size: 2.5em;
+        }
+      }
+
+      .projectBanner {
+        .technology {
+          font-size: 1.5em;
+
+          .techName {
+            padding-left: 1em;
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .producer {
+          width: 90%;
+          font-size: 1.5em;
+
+          .producerName {
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .description {
+          width: 90%;
+          font-size: 1.5em;
+          font-weight: normal;
+          color: var(--clr-subDark);
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-pro-landscape {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .back {
+      font-size: 3em;
+      margin-top: 0.5em;
+      top: 100px;
+    }
+
+    .projectImage {
+      width: 70%;
+      height: 50vh;
+
+      &:before {
+        width: 120%;
+        height: 50%;
+      }
+
+      &:after {
+        inset: 4px;
+      }
+
+      .image {
+        height: 100%;
+        z-index: 99;
+      }
+    }
+
+    .projectContent {
+      width: 90%;
+      height: 50vh;
+
+      .project {
+        width: 70%;
+        height: 8vh;
+        font-weight: normal;
+
+        .projectType {
+          font-size: 2em;
+        }
+
+        .projectName {
+          font-size: 2.5em;
+        }
+      }
+
+      .projectBanner {
+        .technology {
+          font-size: 1.5em;
+
+          .techName {
+            padding-left: 1em;
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .producer {
+          width: 90%;
+          font-size: 1.5em;
+
+          .producerName {
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .description {
+          width: 90%;
+          font-size: 1.5em;
+          font-weight: normal;
+          color: var(--clr-subDark);
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-portrait {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .back {
+      font-size: 3em;
+      margin-top: 0.5em;
+      top: 100px;
+    }
+
+    .projectImage {
+      width: 70%;
+      height: 30vh;
+
+      &:before {
+        width: 120%;
+        height: 50%;
+      }
+
+      &:after {
+        inset: 4px;
+      }
+
+      .image {
+        height: 100%;
+        z-index: 99;
+      }
+    }
+
+    .projectContent {
+      width: 90%;
+      height: 50vh;
+
+      .project {
+        width: 70%;
+        height: 8vh;
+        font-weight: normal;
+
+        .projectType {
+          font-size: 2em;
+        }
+
+        .projectName {
+          font-size: 2.5em;
+        }
+      }
+
+      .projectBanner {
+        .technology {
+          font-size: 1.5em;
+
+          .techName {
+            padding-left: 1em;
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .producer {
+          width: 90%;
+          font-size: 1.5em;
+
+          .producerName {
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .description {
+          width: 90%;
+          font-size: 1.5em;
+          font-weight: normal;
+          color: var(--clr-subDark);
+        }
+      }
+    }
+  }
+}
+
+@include for-ipad-landscape {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .back {
+      font-size: 3em;
+      margin-top: 0.5em;
+      top: 100px;
+    }
+
+    .projectImage {
+      width: 70%;
+      height: 50vh;
+
+      &:before {
+        width: 120%;
+        height: 50%;
+      }
+
+      &:after {
+        inset: 4px;
+      }
+
+      .image {
+        height: 100%;
+        z-index: 99;
+      }
+    }
+
+    .projectContent {
+      width: 90%;
+      height: 50vh;
+
+      .project {
+        width: 70%;
+        height: 8vh;
+        font-weight: normal;
+
+        .projectType {
+          font-size: 2em;
+        }
+
+        .projectName {
+          font-size: 2.5em;
+        }
+      }
+
+      .projectBanner {
+        .technology {
+          font-size: 1.5em;
+
+          .techName {
+            padding-left: 1em;
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .producer {
+          width: 90%;
+          font-size: 1.5em;
+
+          .producerName {
+            font-weight: normal;
+            color: var(--clr-subDark);
+          }
+        }
+
+        .description {
+          width: 90%;
+          font-size: 1.5em;
+          font-weight: normal;
+          color: var(--clr-subDark);
+        }
+      }
+    }
+  }
 }
