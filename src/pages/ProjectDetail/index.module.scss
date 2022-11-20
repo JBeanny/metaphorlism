@@ -8,12 +8,13 @@
   flex-direction: row;
 
   .back {
-    font-size: 4em;
+    font-size: 3em;
     color: var(--clr-purple);
     position: absolute;
     cursor: pointer;
     transition: 0.3s all ease;
     left: 10px;
+    top: 100px;
 
     &:hover {
       color: var(--clr-subDark);
