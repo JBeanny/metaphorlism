@@ -26,9 +26,10 @@
   .serviceContainer {
     display: block;
     height: 30em;
-    margin: 1em 1em;
+    margin: 0 auto;
     overflow: hidden;
     position: relative;
+    max-width: 40em;
 
     .next {
       display: block;
