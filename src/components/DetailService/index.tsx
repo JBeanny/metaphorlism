@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 import classes from "./index.module.css";
 import { OptionIcon } from "../../assets";
 
