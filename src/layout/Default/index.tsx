@@ -6,11 +6,11 @@ function Default() {
   return (
     <>
       <Navigation />
-      <div
+      <main
         className={classes.container}
       >
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </>
   );

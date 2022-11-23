@@ -42,28 +42,35 @@ function DetailService(props: DetailServiceProps) {
           <div className={classes.action}>
             <div className={classes.optionSelector}>
               {bundle.name}
-              <span
-                onClick={handleOption}
-                className={isOption ? classes.active : ""}
-              >
-                <OptionIcon />
-              </span>
-              <div
-                className={classes.option}
-                style={{
-                  scale: isOption ? "1 1" : "1 0",
-                  translate: isOption ? "0" : "0 100%",
-                }}
-              >
-                {servicePackage.map((pack) => {
-                  if (pack.name === bundle.name) return null;
-                  return (
-                    <li key={pack.name} onClick={() => handleSelect(pack.name)}>
-                      {pack.name}
-                    </li>
-                  );
-                })}
-              </div>
+              {servicePackage.length > 1 ? (
+                <>
+                  <span
+                    onClick={handleOption}
+                    className={isOption ? classes.active : ""}
+                  >
+                    <OptionIcon />
+                  </span>
+                  <div
+                    className={classes.option}
+                    style={{
+                      scale: isOption ? "1 1" : "1 0",
+                      translate: isOption ? "0" : "0 100%",
+                    }}
+                  >
+                    {servicePackage.map((pack) => {
+                      if (pack.name === bundle.name) return null;
+                      return (
+                        <li
+                          key={pack.name}
+                          onClick={() => handleSelect(pack.name)}
+                        >
+                          {pack.name}
+                        </li>
+                      );
+                    })}
+                  </div>
+                </>
+              ) : null}
             </div>
             <button className={classes.buy}>Buy</button>
           </div>

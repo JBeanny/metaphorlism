@@ -1,63 +1,66 @@
 @use "../../abstract/mixin" as *;
 
-.title {
-  text-align: center;
-  font-size: 4rem;
-  color: var(--clr-purple);
-  margin-bottom: 2em;
-}
+.wrapper {
+  font-size: 0.625rem;
 
-.serviceContainer {
-  display: flex;
-  justify-content: center;
-  gap: 5em;
-
-  .next {
-    display: none;
-  }
-}
-
-@include for-mobile {
   .title {
-    font-size: 2.5rem;
-    margin-bottom: 0;
+    text-align: center;
+    font-size: 3.85em;
+    color: var(--clr-purple);
+    margin-bottom: 3.5em;
   }
 
   .serviceContainer {
-    display: block;
-    height: 30em;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    max-width: 40em;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
 
     .next {
-      display: block;
-      position: absolute;
-      right: 1.5em;
-      top: 1em;
-      scale: 1.5;
-      animation: Blinking 1.3s ease-in-out infinite;
+      display: none;
+    }
+  }
 
-      svg {
-        fill: black;
-        rotate: -90deg;
-      }
+  @include for-mobile {
+    .title {
+      margin-bottom: 0;
     }
 
-    span {
-      > * {
+    .serviceContainer {
+      display: block;
+      height: 50em;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      max-width: 40em;
+
+      .next {
+        display: block;
         position: absolute;
-        top: 6em;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: none;
+        right: 1.5em;
+        top: 1em;
+        scale: 1.5;
+        animation: Blinking 1.3s ease-in-out infinite;
+
+        svg {
+          fill: black;
+          rotate: -90deg;
+        }
       }
 
-      &.active {
+      span {
         > * {
-          display: block;
+          position: absolute;
+          top: 6em;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: none;
+        }
+
+        &.active {
+          > * {
+            display: block;
+          }
         }
       }
     }

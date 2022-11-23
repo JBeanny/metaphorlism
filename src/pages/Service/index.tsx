@@ -78,7 +78,7 @@ function Service() {
   };
 
   return (
-    <>
+    <div className={classes.wrapper}>
       <h1 className={classes.title}>Our Services</h1>
       <div className={classes.serviceContainer}>
         <div className={classes.next} onTouchStart={handleNextService}>
@@ -110,7 +110,7 @@ function Service() {
           />
         );
       })}
-    </>
+    </div>
   );
 }
 
