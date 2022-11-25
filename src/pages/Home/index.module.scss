@@ -34,11 +34,11 @@
         width: 100%;
         margin-top: 1em;
         color: var(--clr-sub);
-        font-size: 2em;
+        font-size: 1.5em;
       }
 
       .talkBtnContainer {
-        width: 50%;
+        width: 70%;
         display: flex;
         justify-content: flex-end;
         margin-top: 1em;
@@ -69,7 +69,7 @@
       .inspiration {
         width: 100%;
         color: var(--clr-subDark);
-        font-size: 3em;
+        font-size: 2.5em;
         line-height: 1.5em;
       }
     }
@@ -80,15 +80,16 @@
       // margin-bottom: 1em;
 
       .img {
-        width: 85%;
+        width: 100%;
+        height: 80%;
         border-radius: 1em;
       }
     }
   }
 
   .heroSection::after {
-    content: "";
-    width: 0;
+    content: "Metaphorlism will make your metaphors into reality !!!";
+    width: 101vw;
     height: 5vh;
     rotate: -5deg;
     background-color: var(--clr-purple);
@@ -99,17 +100,6 @@
     margin-top: 5em;
     padding-left: 10em;
     color: var(--clr-white);
-    animation: banner 3s linear forwards;
-  }
-
-  @keyframes banner {
-    0% {
-      width: 0vw;
-    }
-    100% {
-      content: "Metaphorlism will make your metaphors into reality !!!";
-      width: 101vw;
-    }
   }
 
   .teamSection {
@@ -164,7 +154,7 @@
           display: flex;
 
           .profileImg {
-            width: 25%;
+            width: 40%;
             height: 100%;
             display: flex;
             justify-content: center;
@@ -362,7 +352,7 @@
           display: flex;
 
           .profileImg {
-            width: 25%;
+            width: 40%;
             height: 100%;
             display: flex;
             justify-content: center;
@@ -666,7 +656,7 @@
     margin-top: 0;
     .heroSection {
       width: 100vw;
-      height: 150vh;
+      height: 200vh;
       flex-direction: column-reverse;
       position: relative;
       margin-top: 0;
@@ -707,10 +697,11 @@
 
       .heroImage {
         width: 100%;
-        height: 40%;
+        height: 50%;
 
         .img {
-          width: 100%;
+          width: 150%;
+          height: 100%;
           border-radius: 0em;
         }
       }
@@ -720,7 +711,7 @@
       content: "Metaphorlism will make your metaphors into reality !!!";
       height: 6vh;
       // top: 43em;
-      top: 35%;
+      top: 32%;
       width: 105vw;
       padding-left: 3em;
       animation: none;
@@ -1611,6 +1602,20 @@
 @include for-ipad-pro-landscape {
   .container {
     .heroSection {
+      .heroContent {
+        padding-top: 5em;
+        .welcome {
+          font-size: 2em;
+        }
+
+        .quote {
+          font-size: 1.5em;
+        }
+
+        .inspiration {
+          font-size: 2em;
+        }
+      }
       .heroImage {
         width: 45%;
         height: 100%;
@@ -1623,8 +1628,7 @@
     }
 
     .heroSection::after {
-      content: "";
-      width: 0;
+      width: 101vw;
       height: 5vh;
       rotate: -5deg;
       background-color: var(--clr-purple);
@@ -1635,7 +1639,6 @@
       margin-top: 5em;
       padding-left: 10em;
       color: var(--clr-white);
-      animation: banner 3s linear forwards;
     }
 
     .teamSection {
@@ -1742,7 +1745,6 @@
     }
 
     .heroSection::after {
-      content: "Metaphorlism will make your metaphors into reality !!!";
       height: 6vh;
       top: 35%;
       width: 105vw;
