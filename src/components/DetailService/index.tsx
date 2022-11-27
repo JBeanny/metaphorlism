@@ -38,7 +38,9 @@ function DetailService(props: DetailServiceProps) {
       </h1>
       <div className={classes.container}>
         <div className={classes.imageSection}>
-          <img src={bundle.image} alt={bundle.name} />
+          <div className={classes.image}>
+            <img src={bundle.image} alt={bundle.name} />
+          </div>
           <div className={classes.action}>
             <div className={classes.optionSelector}>
               {bundle.name}
@@ -50,7 +52,7 @@ function DetailService(props: DetailServiceProps) {
                   >
                     <OptionIcon />
                   </span>
-                  <div
+                  <ul
                     className={classes.option}
                     style={{
                       scale: isOption ? "1 1" : "1 0",
@@ -68,7 +70,7 @@ function DetailService(props: DetailServiceProps) {
                         </li>
                       );
                     })}
-                  </div>
+                  </ul>
                 </>
               ) : null}
             </div>
@@ -82,9 +84,11 @@ function DetailService(props: DetailServiceProps) {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{bundle.description}
           </p>
           <p className={classes.list}>List of Services</p>
-          {bundle.serviceList.map((service) => {
-            return <li key={service}>{service}</li>;
-          })}
+          <ul>
+            {bundle.serviceList.map((service) => {
+              return <li key={service}>{service}</li>;
+            })}
+          </ul>
           <div className={classes.duration}>Duration: {bundle.duration}s</div>
         </div>
       </div>

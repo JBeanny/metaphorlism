@@ -15,7 +15,7 @@ function SmallService(props: SmallServiceProps) {
       <img src={image} alt={id} />
       <h2>{title}</h2>
       <p>{description}</p>
-      <a
+      <button
         onClick={() => {
           window.scrollTo({
             top:
@@ -26,7 +26,7 @@ function SmallService(props: SmallServiceProps) {
         }}
       >
         View more
-      </a>
+      </button>
     </div>
   );
 }
