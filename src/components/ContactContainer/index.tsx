@@ -23,7 +23,7 @@ function ContactContainer(props: ContactProps) {
   return (
     <div className={classes.container}>
       <img src={logo} alt={platform} className={classes.logo} />
-      <h3 className={classes.platform}>{platform}</h3>
+      <h2 className={classes.platform}>{platform}</h2>
       <span className={classes.line}></span>
       <h3 className={classes.name}>{name}</h3>
       <p className={classes.link}>{link}</p>
