@@ -1,9 +1,11 @@
 @use "../../abstract/mixin" as *;
 
 .container {
+  --width: 65ch;
+
   background-color: #fff;
   font-size: 0.625rem;
-  width: 65ch;
+  width: var(--width);
   height: 50em;
   position: relative;
   padding-top: 3em;
@@ -50,6 +52,12 @@
   p {
     text-align: center;
     font-size: 1.92em;
+  }
+}
+
+@include for-ipad {
+  .container {
+    --width: 52ch;
   }
 }
 

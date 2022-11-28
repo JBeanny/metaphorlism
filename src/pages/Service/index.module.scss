@@ -20,6 +20,13 @@
     }
   }
 
+  @include for-ipad {
+    .serviceContainer {
+      justify-content: space-around;
+      gap: 1em;
+    }
+  }
+
   @include for-mobile {
     .title {
       margin-bottom: 0;

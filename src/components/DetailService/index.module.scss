@@ -34,13 +34,20 @@
       .image {
         --lenght: 50em;
 
-        display: block;
+        display: grid;
+        place-items: center;
         width: var(--lenght);
         height: var(--lenght);
-        background-color: black;
+        background-color: #0002;
         border-radius: 10px;
         overflow: hidden;
         position: relative;
+        box-shadow: 0 0 5px #000a;
+
+        img {
+          width: 100%;
+          border-radius: none;
+        }
       }
 
       .action {
@@ -162,7 +169,7 @@
   }
 }
 
-@include for-mobile {
+@include for-ipad {
   .service {
     .serviceName {
       font-size: 3em;
@@ -176,8 +183,8 @@
       align-items: center;
 
       .imageSection {
-        img {
-          --lenght: 30em;
+        .image {
+          --lenght: 50em;
         }
 
         .action {
@@ -190,6 +197,23 @@
         // margin: 0 2em;
         width: 90%;
         flex-basis: 60em;
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .service {
+    .container {
+      .imageSection {
+        .image {
+          --lenght: 30em;
+        }
+
+        .action {
+          gap: 1em;
+          font-size: 1.7em;
+        }
       }
     }
   }
