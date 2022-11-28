@@ -81,7 +81,7 @@ function Navigation() {
     <div className={classes.container} id="navigation-bar">
       <div className={classes.logo}>
         <img src={Logo} alt="Metaphorlism's Logo" />
-        <h1 className={classes.name} onTouchStart={handleScrollToTop}>
+        <h1 className={classes.name} onClick={handleScrollToTop}>
           Metaphorlism
         </h1>
       </div>
@@ -129,7 +129,7 @@ function Navigation() {
       </div>
       <span
         className={classes.hamburger}
-        onTouchStart={() => setOpenMenu((prev) => !prev)}
+        onClick={() => setOpenMenu((prev) => !prev)}
       >
         <HamburgerIcon />
       </span>
