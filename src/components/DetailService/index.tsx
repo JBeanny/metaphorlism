@@ -1,18 +1,12 @@
 import { useState } from "react";
 import classes from "./index.module.css";
 import { OptionIcon } from "../../assets";
+import { IPackage } from "../../config/axios";
 
 type DetailServiceProps = {
   id: string;
   title: string;
-  servicePackage: Array<{
-    name: string;
-    image: string;
-    description: string;
-    serviceList: Array<string>;
-    duration: number;
-    price: number;
-  }>;
+  servicePackage: Array<IPackage>;
 };
 
 function DetailService(props: DetailServiceProps) {
@@ -39,7 +33,7 @@ function DetailService(props: DetailServiceProps) {
       <div className={classes.container}>
         <div className={classes.imageSection}>
           <div className={classes.image}>
-            <img src={bundle.image} alt={bundle.name} />
+            <img src={`http://localhost:8080${bundle.image.url}`} alt={bundle.name} />
           </div>
           <div className={classes.action}>
             <div className={classes.optionSelector}>

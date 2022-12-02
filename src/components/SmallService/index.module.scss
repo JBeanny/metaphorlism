@@ -3,17 +3,17 @@
 .container {
   --width: 65ch;
 
-  background-color: #fff;
+  background-color: var(--clr-white);
   font-size: 0.625rem;
   width: var(--width);
   height: 50em;
   position: relative;
-  padding-top: 3em;
   border-radius: 10px;
+  padding: 3em 0.5em 0 0.5em;
 
   button {
     position: absolute;
-    color: #fff;
+    color: var(--clr-white);
     font-size: 1.7em;
     background-color: var(--clr-purple);
     text-decoration: none;
@@ -26,7 +26,7 @@
 
     &:visited,
     &:active {
-      color: #fff;
+      color: var(--clr-white);
     }
   }
 

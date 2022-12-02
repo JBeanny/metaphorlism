@@ -58,7 +58,7 @@
         .optionSelector {
           position: relative;
           width: 70%;
-          background-color: #fff;
+          background-color: var(--clr-white);
           padding: 0 0.5em;
           border-radius: 10px;
 
@@ -120,7 +120,7 @@
 
     .package {
       width: 50em;
-      background-color: #fff;
+      background-color: var(--clr-white);
       border-radius: 15px;
       padding: 2em;
       position: relative;

@@ -1,117 +1,71 @@
 import { useState } from "react";
-import { Dev, Lecture, OptionIcon, UI, UIPicture } from "../../assets";
+import { OptionIcon } from "../../assets";
 import { SmallService, DetailService } from "../../components";
+import { getServices } from "../../config/axios";
 import classes from "./index.module.css";
-const SERVICE = [
-  {
-    id: "design",
-    image: UI,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet.",
-    package: [
-      {
-        name: "Basic",
-        image: UIPicture,
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, veritatis.",
-        serviceList: ["Example1", "Example2", "Example3", "Example4"],
-        duration: 0,
-        price: 20,
-      },
-      {
-        name: "Advance",
-        image: "",
-        description: "Lorem consectetur adipisicing elit. Officia, veritatis.",
-        serviceList: ["Example5", "Example2", "Example3", "Example4"],
-        duration: 10,
-        price: 50,
-      },
-    ],
-  },
-  {
-    id: "web",
-    image: Dev,
-    title: "Web Development",
-    description: "Lorem ipsum dolor sit amet.",
-    package: [
-      {
-        name: "Basic",
-        image: "",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, veritatis.",
-        serviceList: ["Example1", "Example2", "Example3", "Example4"],
-        duration: 0,
-        price: 20,
-      },
-    ],
-  },
-  {
-    id: "lecture",
-    image: Lecture,
-    title: "Lecture",
-    description: "Lorem ipsum dolor sit amet.",
-    package: [
-      {
-        name: "Basic",
-        image: "",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, veritatis.",
-        serviceList: ["Example1", "Example2", "Example3", "Example4"],
-        duration: 0,
-        price: 20,
-      },
-    ],
-  },
-];
+import { useQuery } from "react-query";
 
 function Service() {
-  const SERVICE_ID = SERVICE.map((service) => service.id);
-  const [activeId, setActiveId] = useState(SERVICE_ID[0]);
+  const [serviceId, setServiceId] = useState<Array<string>>([]);
+  const [activeId, setActiveId] = useState<string>("");
+
+  const { data, status } = useQuery(["services"], getServices, {
+    onSuccess: (data) => {
+      setServiceId(data.map((service) => service.id));
+      setActiveId(data[0].id);
+    },
+  });
 
   const handleNextService = () => {
     setActiveId((prev) => {
-      if (SERVICE_ID.indexOf(activeId) === SERVICE_ID.length - 1)
-        return SERVICE_ID[0];
-
-      return SERVICE_ID[SERVICE_ID.indexOf(prev) + 1];
+      if (serviceId.indexOf(activeId) === serviceId.length - 1)
+        return serviceId[0];
+      return serviceId[serviceId.indexOf(prev) + 1];
     });
   };
 
-  return (
-    <div className={classes.wrapper}>
-      <h1 className={classes.title}>Our Services</h1>
-      <div className={classes.serviceContainer}>
-        <div className={classes.next} onTouchStart={handleNextService}>
-          <OptionIcon /> {/* Next Icon */}
+  if (status === "loading")
+    return <h1 style={{ textAlign: "center", letterSpacing: ".5em" }}>Loading...</h1>;
+
+  if (status == "success") {
+    return (
+      <div className={classes.wrapper}>
+        <h1 className={classes.title}>Our Services</h1>
+        <div className={classes.serviceContainer}>
+          {data.length > 1 ? (
+            <div className={classes.next} onClick={handleNextService}>
+              <OptionIcon /> {/* Next Icon */}
+            </div>
+          ) : null}
+          {data.map((service, i) => {
+            return (
+              <span
+                className={activeId === service.id ? classes.active : undefined}
+                key={service.id}
+              >
+                <SmallService
+                  id={service.id}
+                  image={`http://localhost:8080${service.image.url}`}
+                  title={service.name}
+                  description={service.description}
+                />
+              </span>
+            );
+          })}
         </div>
-        {SERVICE.map((service, i) => {
+        {data.map((service, i) => {
           return (
-            <span
-              className={activeId === service.id ? classes.active : undefined}
+            <DetailService
               key={service.id}
-            >
-              <SmallService
-                id={service.id}
-                image={service.image}
-                title={service.title}
-                description={service.description}
-              />
-            </span>
+              id={service.id}
+              title={service.name}
+              servicePackage={service.package}
+            />
           );
         })}
       </div>
-      {SERVICE.map((service, i) => {
-        return (
-          <DetailService
-            key={service.id}
-            id={service.id}
-            title={service.title}
-            servicePackage={service.package}
-          />
-        );
-      })}
-    </div>
-  );
+    );
+  }
 }
 
 export default Service;

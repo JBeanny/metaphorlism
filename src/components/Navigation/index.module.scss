@@ -100,14 +100,14 @@
 
 .container .linkContainer {
   .link.active {
-    color: #fff;
+    color: var(--clr-white);
 
     svg {
-      fill: #fff;
+      fill: var(--clr-white);
     }
 
     &.home svg {
-      stroke: #fff;
+      stroke: var(--clr-white);
       fill: var(--clr-purple);
     }
 
@@ -115,14 +115,14 @@
   }
 
   .link.clickAnimation {
-    color: #fff;
+    color: var(--clr-white);
 
     svg {
-      fill: #fff;
+      fill: var(--clr-white);
     }
 
     &.home svg {
-      stroke: #fff;
+      stroke: var(--clr-white);
       fill: var(--clr-purple);
     }
 
